@@ -1,3 +1,8 @@
+
+
+
+
+
 $(function () {
     var ctx = document.getElementById("Chart1").getContext("2d");
     var lineChart = new Chart(ctx, {
@@ -44,82 +49,29 @@ $(function () {
 });
 
 
-(function ($){
 
-    $.fn.bekeyProgressbar = function(options){
-
-        options = $.extend({
-        	animate     : true,
-          animateText : true
-        }, options);
-
-        var $this = $(this);
-      
-        var $progressBar = $this;
-        var $progressCount = $progressBar.find('.ProgressBar-percentage--count');
-        var $circle = $progressBar.find('.ProgressBar-circle');
-        var percentageProgress = $progressBar.attr('data-progress');
-        var percentageRemaining = (100 - percentageProgress);
-        var percentageText = $progressCount.parent().attr('data-progress');
-      
-        //Calcule la circonférence du cercle
-        var radius = $circle.attr('r');
-        var diameter = radius * 2;
-        var circumference = Math.round(Math.PI * diameter);
-
-        //Calcule le pourcentage d'avancement
-        var percentage =  circumference * percentageRemaining / 100;
-
-        $circle.css({
-          'stroke-dasharray' : circumference,
-          'stroke-dashoffset' : percentage
-        })
-        
-        //Animation de la barre de progression
-        if(options.animate === true){
-          $circle.css({
-            'stroke-dashoffset' : circumference
-          }).animate({
-            'stroke-dashoffset' : percentage
-          }, 3000 )
+$(".circle_percent").each(function() {
+    var $this = $(this),
+		$dataV = $this.data("percent"),
+		$dataDeg = $dataV * 3.6,
+		$round = $this.find(".round_per");
+	$round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");	
+	$this.append('<div class="circle_inbox"><span class="percent_text"></span></div>');
+	$this.prop('Counter', 0).animate({Counter: $dataV},
+	{
+		duration: 2000, 
+		easing: 'swing', 
+		step: function (now) {
+            $this.find(".percent_text").text(Math.ceil(now)+"%");
         }
-        
-        //Animation du texte (pourcentage)
-        if(options.animateText == true){
- 
-          $({ Counter: 0 }).animate(
-            { Counter: percentageText },
-            { duration: 3000,
-             step: function () {
-               $progressCount.text( Math.ceil(this.Counter) + '%');
-             }
-            });
-
-        }else{
-          $progressCount.text( percentageText + '%');
-        }
-      
-    };
-
-})(jQuery);
-
-$(document).ready(function(){
-  
-  $('.ProgressBar--animateNone').bekeyProgressbar({
-    animate : false,
-    animateText : false
-  });
-  
-  $('.ProgressBar--animateCircle').bekeyProgressbar({
-    animate : true,
-    animateText : false
-  });
-  
-  $('.ProgressBar--animateText').bekeyProgressbar({
-    animate : false,
-    animateText : true
-  });
-  
-  $('.ProgressBar--animateAll').bekeyProgressbar();
-  
-})
+    });
+	if($dataV >= 51){
+		$round.css("transform", "rotate(" + 360 + "deg)");
+		setTimeout(function(){
+			$this.addClass("percent_more");
+		},1000);
+		setTimeout(function(){
+			$round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
+		},1000);
+	} 
+});

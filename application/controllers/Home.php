@@ -92,6 +92,78 @@ class Home extends CI_Controller{
 			redirect('logout');
 		}
 	}
+
+	public function create_challenge(){
+		$popular = $this->input->post('popular');
+
+		if ($popular == 'walkon') {
+			$data_challenge = [
+				'points' => $this->input->post('points'),
+				'start_time' => $this->input->post('start_time'),
+				'end_time' => $this->input->post('end_time'),
+				'duration' => $this->input->post('duration'),
+				'step_count' => $this->input->post('step_count'),
+				'name' => $this->input->post('name'),
+				'description' => $this->input->post('description')
+			];
+		} elseif ($popular == 'stepon') {
+			$data_challenge = [
+				'points' => $this->input->post('points'),
+				'start_time' => $this->input->post('start_time'),
+				'end_time' => $this->input->post('end_time'),
+				'duration' => $this->input->post('duration'),
+				'distance' => $this->input->post('distance'),
+				'speed' => $this->input->post('speed'),
+				'name' => $this->input->post('name'),
+				'description' => $this->input->post('description')
+			];
+
+		} elseif ($popular == 'pedalon') {
+			$data_challenge = [
+				'points' => $this->input->post('points'),
+				'start_time' => $this->input->post('start_time'),
+				'end_time' => $this->input->post('end_time'),
+				'duration' => $this->input->post('duration'),
+				'distance' => $this->input->post('distance'),
+				'speed' => $this->input->post('speed'),
+				'name' => $this->input->post('name'),
+				'description' => $this->input->post('description')
+			];
+		}
+
+		$create_challenge = $this->Home_model->create_challenge_model($data_challenge,$popular);
+
+		if ($create_challenge) {
+			$id = $create_challenge;
+			$data_badges = [
+				'live_badges_id' => $create_challenge,
+				'points' => $this->input->post('points'),
+				'badge_pic' => $this->input->post('badge_pic'),
+				'name' => $this->input->post('b_name'),
+				'description' => $this->input->post('description'),
+				'challenge_id' => $create_challenge
+			];
+			$create_badges = $this->Home_model->create_badges_model($data_badges);
+			if ($create_badges) {
+				$id = $create_badges;
+				$data_live_challenges = [
+					'live_challenges_id' => $create_challenge,
+					'type_of_challenge' => $this->input->post('points'),
+					'points' => $this->input->post('points'),
+					'badge_id' => $create_badges,
+				];
+				$create_badges = $this->Home_model->create_data_live_challenges_model($data_live_challenges);
+
+				$this->session->set_flashdata('create_challenge',$popular . ' Challenge is created');
+				redirect('welcome');
+
+			} else {
+				return false;
+			}
+		} else {
+
+		}
+	}
 }
 
 ?>

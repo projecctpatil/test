@@ -26,211 +26,113 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div class="inner-wrapper">
-
-
-	<header class="header">
-
+	
+	<nav class="mnb navbar navbar-default">
 		<div class="top-header-section">
-			<div class="container-fluid">
-				<div class="row align-items-center">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-6">
-						<div class="logo my-3 my-sm-0">
-							<a href="index.html">
-								<img src="assets/img/brooch.svg" alt="logo image" class="img-fluid" width="100">
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-9 col-md-9 col-sm-9 col-6 text-right">
-						<div class="user-block d-none d-lg-block">
-							<div class="row align-items-center">
-								<div class="col-lg-12 col-md-12 col-sm-12">
-									<div class="user-notification-block align-right d-inline-block">
-										<div class="top-nav-search">
-											<form>
-												<input type="text" class="form-control" placeholder="Search here">
-												<button class="btn" type="submit"><i class="fa fa-search"></i></button>
-											</form>
-										</div>
-									</div>
-
-									<div class="user-notification-block align-right d-inline-block">
-										<ul class="list-inline m-0">
-											<li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Apply Leave">
-												<a href="leave.html" class="font-23 menu-style text-white align-middle">
-													<span class="lnr lnr-briefcase position-relative"></span>
-												</a>
-											</li>
-										</ul>
-									</div>
-
-
-									<div class="user-info align-right dropdown d-inline-block header-dropdown">
-										<a href="javascript:void(0)" data-toggle="dropdown" class=" menu-style dropdown-toggle">
-											<div class="user-avatar d-inline-block">
-												<img src="assets/img/profiles/img-6.jpg" alt="user avatar" class="rounded-circle img-fluid" width="55">
-											</div>
-										</a>
-
-										<div class="dropdown-menu notification-dropdown-menu shadow-lg border-0 p-3 m-0 dropdown-menu-right">
-											<a class="dropdown-item p-2" href="employment.html">
-												<span class="media align-items-center">
-													<span class="lnr lnr-user mr-3"></span>
-													<span class="media-body text-truncate">
-														<span class="text-truncate">Profile</span>
-													</span>
-												</span>
-											</a>
-											<a class="dropdown-item p-2" href="settings.html">
-												<span class="media align-items-center">
-													<span class="lnr lnr-cog mr-3"></span>
-													<span class="media-body text-truncate">
-														<span class="text-truncate">Settings</span>
-													</span>
-												</span>
-											</a>
-											<a class="dropdown-item p-2" href="<?php echo base_url('index.php/Home/logout'); ?>">
-												<span class="media align-items-center">
-													<span class="lnr lnr-power-switch mr-3"></span>
-													<span class="media-body text-truncate">
-														<span class="text-truncate">Login</span>
-													</span>
-												</span>
-											</a>
-										</div>
-
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="d-block d-lg-none">
-							<a href="javascript:void(0)">
-							<span class="lnr lnr-user d-block display-5 text-white" id="open_navSidebar"></span>
-							</a>
-
-							<div class="offcanvas-menu" id="offcanvas_menu">
-								<span class="lnr lnr-cross float-left display-6 position-absolute t-1 l-1 text-white" id="close_navSidebar"></span>
-								<div class="user-info align-center bg-theme text-center">
-									<a href="javascript:void(0)" class="d-block menu-style text-white">
-										<div class="user-avatar d-inline-block mr-3">
-											<img src="assets/img/profiles/img-6.jpg" alt="user avatar" class="rounded-circle img-fluid" width="55">
-										</div>
-									</a>
-								</div>
-								<div class="user-notification-block align-center">
-									<div class="top-nav-search">
-										<form>
-											<input type="text" class="form-control" placeholder="Search here">
-											<button class="btn" type="submit"><i class="fa fa-search"></i></button>
-										</form>
-									</div>
-								</div>
-								<hr>
-								<div class="user-menu-items px-3 m-0">
-									<a class="px-0 pb-2 pt-0" href="index.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-home mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Dashboard</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="employees.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-users mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Employees</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="company.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-apartment mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Company</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="calendar.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-calendar-full mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Calendar</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="leave.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-briefcase mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Leave</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="reviews.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-star mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Reviews</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="reports.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-rocket mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Reports</span>
-											 </span>
-										</span>
-									</a>
-									<a class="p-2" href="manage.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-sync mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Manage</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="settings.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-cog mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Settings</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="employment.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-user mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Profile</span>
-											</span>
-										</span>
-									</a>
-									<a class="p-2" href="login.html">
-										<span class="media align-items-center">
-											<span class="lnr lnr-power-switch mr-3"></span>
-											<span class="media-body text-truncate text-left">
-												<span class="text-truncate text-left">Logout</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
-
-						</div>	
-					</div>
+			<div class="navbar-header">
+				<div style="padding: 15px 0;">
+					<a href="#" id="msbo"><i class="ic fa fa-bars"></i></a>
 				</div>
 			</div>
 		</div>
+		<div class="user-info align-right dropdown d-inline-flex header-dropdown">
+			<div class="user-details">
+				<h4><b>Welcome Admin!</b></h4>
+			</div>
+			<a href="javascript:void(0)" data-toggle="dropdown" class=" menu-style">
+				<div class="user-avatar d-inline-block">
+					<img src="assets/img/profiles/img-6.jpg" alt="user avatar" class="rounded-circle img-fluid" width="55">
+				</div>
+			</a>
+			<!--<div class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item p-2" href="employment.html">
+					<span class="media align-items-center">
+						<span class="lnr lnr-user mr-3"></span>
+						<span class="media-body text-truncate">
+							<span class="text-truncate">Profile</span>
+						</span>
+					</span>
+				</a>
+				<a class="dropdown-item p-2" href="settings.html">
+					<span class="media align-items-center">
+						<span class="lnr lnr-cog mr-3"></span>
+						<span class="media-body text-truncate">
+							<span class="text-truncate">Settings</span>
+						</span>
+					</span>
+				</a>
+				<a class="dropdown-item p-2" href="login.html">
+					<span class="media align-items-center">
+						<span class="lnr lnr-power-switch mr-3"></span>
+						<span class="media-body text-truncate">
+							<span class="text-truncate">Logout</span>
+						</span>
+					</span>
+				</a>
+			</div>-->
+		</div>
+	</nav>
+	<div class="msb" id="msb">
+		<nav class="navbar navbar-default" role="navigation">
+				<div class="sidebar sidebar-user text-center shadow-sm">
+					<h4 class="text-dark">Admin Dashboard</h4>
+				</div>
+		
 
-</header>
+			<!-- Main Menu -->
+			<div class="side-menu-container">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#"><span class="lnr lnr-home pr-0 pb-lg-2"></span><span class=""> Dashboard</span></a></li>
+					<li><a href="#"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Company</span></a></li>
+					<li><a href="#"><span class="lnr lnr-calendar-full pr-0 pb-lg-2"></span><span class=""> Calendar</span></a></li>
+					<li><a href="#"><span class="lnr lnr-star pr-0 pb-lg-2"></span><span class="">Reviews</span></a></li>
+					<li><a href="#"><span class="lnr lnr-rocket pr-0 pb-lg-2"></span><span class=""> Reports</span></a></li>
+					<li><a href="#"><span class="lnr lnr-cog pr-0 pb-lg-2"></span><span class=""> Settings</span></a></li>
+					<li><a href="#"><span class="lnr lnr-user pr-0 pb-lg-2"></span><span class=""> Profile</span></a></li>
+					<!--<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl1">
+							<i class="fa fa-diamond"></i> Apps
+						  <span class="caret"></span>
+						</a>
+						<div id="dropdown-lvl1" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="#">Mail</a></li>
+									<li><a href="#">Calendar</a></li>
+									<li><a href="#">Ecommerce</a></li>
+									<li><a href="#">User</a></li>
+									<li><a href="#">Social</a></li>
+
+									
+									<li class="panel panel-default" id="dropdown">
+										<a data-toggle="collapse" href="#dropdown-lvl2">
+											<i class="glyphicon glyphicon-off"></i> Sub Level <span class="caret"></span>
+										</a>
+										<div id="dropdown-lvl2" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">Link</a></li>
+													<li><a href="#">Link</a></li>
+													<li><a href="#">Link</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>-->
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>  
+	</div>
 
 
+<div class="mcw">
 <div class="page-wrapper">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xl-3 col-lg-4 col-md-12 theiaStickySidebar">
+			<!--<div class="col-xl-3 col-lg-4 col-md-12 theiaStickySidebar">
 				<aside class="sidebar sidebar-user">
 					<div class="row">
 						<div class="col-12">
@@ -307,8 +209,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 
 				</aside>
-			</div>
-			<div class="col-xl-9 col-lg-8  col-md-12">
+			</div>-->
+			<div class="col-xl-12 col-lg-12  col-md-12">
 				<div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card grow">
 					<div class="card-body">
 						<div class="d-flex justify-content-between align-items-center breaking-news bg-white">
@@ -388,23 +290,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="card-header">
 								<h4 class="card-title mb-0">Live Challenges</h4>
 							</div>
+							<?php if ($this->session->flashdata('create_challenge')) { ?>
+								<h4 class="alert alert-success" ><?php echo $this->session->flashdata('create_challenge'); ?></h4>
+							<?php } ?>
+							
 							<div class="card-body">
 								<div class="Content">
 									<ul class="List">
 										<li class="List-item">
 											<div class="list-item-title">
 												<h6>WalkOn</h6>
-												<button class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+												<button class="btn" data-toggle="modal" data-target="#exampleModalCenterwalkon">
 													<i class="fas fa-plus"></i>
 												</button>	
 											</div>
-											<div class="ProgressBar ProgressBar--animateCircle ProgressBar--animateText" data-progress="50">
-												<svg class="ProgressBar-contentCircle"  viewBox="0 0 200 200">
-											<!-- on défini le l'angle et le centre de rotation du cercle -->
-											<circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="95" />
-											<circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="95" />
-											<span class="ProgressBar-percentage ProgressBar-percentage--count"></span>
-												</svg>
+											<div class="circle_percent" data-percent="<?php echo $walkon; ?>">
+												  <div class="circle_inner">
+													  <div class="round_per">
+													</div>
+												</div>
 											</div>
 											<div class="more-graph-item text-center justify-content-center">
 												<button class="btn">More</button>
@@ -414,15 +318,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<li class="List-item">
 											<div class="list-item-title">
 												<h6>SprintOn</h6>
-												<button class="btn"><i class="fas fa-plus"></i></button>
+												<button class="btn" data-toggle="modal" data-target="#exampleModalCentersprinton"><i class="fas fa-plus"></i></button>
 											</div>
-											<div class="ProgressBar ProgressBar--animateCircle ProgressBar--animateText" data-progress="59">
-												<svg class="ProgressBar-contentCircle"  viewBox="0 0 200 200">
-														<!-- on défini le l'angle et le centre de rotation du cercle -->
-												<circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="95" />
-												<circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="95" />
-												<span class="ProgressBar-percentage ProgressBar-percentage--count"></span>
-												</svg>
+											<div class="circle_percent" data-percent="<?php echo $stepon; ?>">
+												<div class="circle_inner">
+													<div class="round_per"></div>
+												</div>
 											</div>
 											<div class="more-graph-item text-center justify-content-center">
 												<button class="btn">More</button>
@@ -432,15 +333,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<li class="List-item">
 											<div class="list-item-title">
 												<h6>PedalOn</h6>
-												<button class="btn"><i class="fas fa-plus"></i></button>
+												<button class="btn" data-toggle="modal" data-target="#exampleModalCenterpedalon"><i class="fas fa-plus"></i></button>
 											</div>
-											<div class="ProgressBar ProgressBar--animateCircle ProgressBar--animateText" data-progress="95">
-												<svg class="ProgressBar-contentCircle"  viewBox="0 0 200 200">
-														<!-- on défini le l'angle et le centre de rotation du cercle -->
-												<circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="95" />
-												<circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="95" />
-												<span class="ProgressBar-percentage ProgressBar-percentage--count"></span>
-												</svg>
+											<div class="circle_percent" data-percent="<?php echo $pedalon; ?>">
+												<div class="circle_inner">
+													<div class="round_per"></div>
+												</div>
 											</div>
 											<div class="more-graph-item text-center justify-content-center">
 												<button class="btn">More</button>
@@ -754,41 +652,97 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 							<div class="card-body recent-activ admin-activ">
 								<div class="row stat">
-									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-										<div class="stats milestone-details">
-											<div class="counting highlight" data-count="2000000">0</div>
-											<h5>Budget</h5>
+									<div class="stat-section col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										<div class="row milestone-details">
+											<div class="col-7 stats">
+												<h5>Budget</h5>
+												<div class="counting highlight">100K</div>
+												<button class="btn" data-toggle="modal" data-target="#">
+													<i class="fas fa-plus"></i>
+												</button>
+											</div>
+											<div class="col-5">
+												<div class="stats-icon">
+													<i class="fas fa-wallet"></i>
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 milestone-right">
-										<div class="stats milestone-details">
-											<div class="counting highlight" data-count="1000000">0</div>
-											<h5>Remaining</h5>
-										</div>
-									</div>
-								</div>
-								<div class="row stat justify-content-center">
-									<div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
-										<div class="stats milestone-details">
-											<div class="counting highlight" data-count="1000000">0</div>
-											<h5>Utilized</h5>
+									<div class="stat-section col-lg-6 col-md-6 col-sm-6 col-xs-12 milestone-right">
+										<div class="row milestone-details gifted-section">
+											<div class="col-7 stats">
+												<h5>Gifted</h5>
+												<div class="counting highlight">50K</div>
+											</div>
+											<div class="col-5">
+												<div class="stats-icon">
+													<i class="fas fa-gift"></i>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="row stat">
-									<div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
-										<div class="stats milestone-details">
-											<div class="counting highlight" data-count="50000">0</div>
-											<h5>Redeemed</h5>
+									<div class="stat-section col-lg-6 col-md-3 col-sm-6 col-xs-12">
+										<div class="row milestone-details">
+											<div class="col-7 stats">
+												<h5>Redeemed</h5>
+												<div class="counting highlight">40K</div>
+											</div>
+											<div class="col-5">
+												<div class="stats-icon">
+													<i class="fas fa-ticket-alt"></i>
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-3 col-sm-6 col-xs-12 milestone-right">
-										<div class="stats milestone-details">
-											<div class="counting highlight" data-count="10000">0</div>
-											<h5>Earned</h5>
+									<div class="stat-section col-lg-6 col-md-3 col-sm-6 col-xs-12 milestone-right">
+										<div class="row milestone-details">
+											<div class="col-7 stats">
+												<h5>Brooch coins</h5>
+												<div class="counting highlight">10K</div>
+											</div>
+											<div class="col-5">
+												<div class="stats-icon">
+													<i class="fas fa-coins"></i>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
+								<div class="row stat">
+									<div class="stat-section justify-content-center col-lg-12 col-md-3 col-sm-6 col-xs-12">
+										<div class="row milestone-details">
+											<div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+												<div class="row">
+													<div class="col-7 stats">
+														<h5>Total spend</h5>
+														<div class="counting highlight">500K</div>
+													</div>
+													<div class="col-5">
+														<div class="stats-icon">
+															<i class="fas fa-money-bill"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+												<div class="row">
+													<div class="col-7 stats">
+														<h5>Total savings</h5>
+														<div class="counting highlight">10K</div>
+													</div>
+													<div class="col-5">
+														<div class="stats-icon">
+															<i class="fas fa-money-bill"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
 							</div><!-- stat -->
 						</div>
 					</div>
@@ -835,83 +789,335 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
+</div>
+
+
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenterwalkon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-		<form>
-		  <div class="form-group row">
-			<label for="title" class="col-sm-2 col-form-label">Title</label>
-			<div class="col-sm-10">
-			  <input type="text" class="form-control" id="title" placeholder="Title">
-			</div>
-		  </div>
-		  <div class="form-group row">
-			<label class="col-sm-2 col-form-label">Title</label>
-			<div class="col-sm-10">
-			<div class="form-check form-check-inline">
-			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-			  <label class="form-check-label" for="inlineRadio1">Standard</label>
-			</div>
-			<div class="form-check form-check-inline">
-			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-			  <label class="form-check-label" for="inlineRadio2">Power</label>
-			</div>
-			</div>
-		  </div>
-		  <div class="form-group row">
-			<div class="col">
-				<div class="row">
-			  <label for="startdate" class="col-sm-4 col-form-label">Start Date</label>
-				<div class="col-sm-8">
-				  <input type="text" class="form-control" id="startdate" placeholder="Title">
-				</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="row">
-				<label for="stopdate" class="col-sm-4 col-form-label">Stop Date</label>
-				<div class="col-sm-8">
-					<input type="text" class="form-control" id="stopdate" placeholder="Title">
-				</div>
-				</div>
-			</div>
-		  </div>
-		  <div class="form-group row">
-			<label for="minstep" class="col-sm-2 col-form-label">Minimum Steps</label>
-			<div class="col-sm-10">
-			  <input type="text" class="form-control" id="minstep" placeholder="Title">
-			</div>
-		  </div>
-		  <div class="form-group row">
-			<label for="msg" class="col-sm-2 col-form-label">Message</label>
-			<div class="col-sm-10">
-			  <textarea class="form-control" id="msg" rows="3"></textarea>
-			</div>
-		  </div>
-		  <div class="form-group row">
-			<label for="reward" class="col-sm-2 col-form-label">Reward</label>
-			<div class="col-sm-10">
-			  <input type="text" class="form-control" id="reward" placeholder="Title">
-			</div>
-		  </div>
-		  <button type="submit" class="btn btn-primary">Sign in</button>
-		</form>
+		<!-- multistep form -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg12 col-xl-12 text-center p-0 mb-2">
+            <div class="card-main-body px-5 pt-4 pb-0 mb-3">
+                <h2 id="heading">Create Challenge</h2>
+                <form id="msform" action="<?php echo base_url(); ?>create_challenge" method="POST">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="account"><strong>Define Event</strong></li>
+                        <li id="personal"><strong>Create your Badge</strong></li>
+                        <!-- <li id="payment"><strong>Summary</strong></li> -->
+						<li id="confirm"><strong>Finish</strong></li>
+                    </ul>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 1 - 3</h2>
+                                </div>
+                            </div> 
+                            <input type="hidden" name="popular" value="walkon">
+							<label class="fieldlabels">Name: *</label> 
+							<input type="text" name="name" placeholder="Name" /> 
+							<label class="fieldlabels">Start Date: *</label> 
+							<input type="date" name="start_time" placeholder="Start Date" /> 
+							<label class="fieldlabels">End Date: *</label> 
+							<input type="date" name="end_time" placeholder="End Date" /> 
+							<label class="fieldlabels">Number of Steps: *</label> 
+							<input type="number" name="step_count" placeholder="No. of Steps" /> 
+							<label class="fieldlabels">Message: </label> 
+							<textarea id="msg" rows="3" name="description"></textarea>
+							<label class="fieldlabels">Points: *</label> 
+							<input type="number" name="points" placeholder="Points" />
+							<label class="fieldlabels">Duration: *</label> 
+							<input type="number" name="duration" placeholder="Duration" />
+                        </div> 
+						<input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 2 - 3</h2>
+                                </div>
+                            </div> 
+							<input type="radio" id="name" name="b_name" value="30">
+							<label class="fieldlabels fieldlabelradio" for="standard">Standard</label>
+							<input type="radio" id="name" name="b_name" value="60">
+							<label class="fieldlabels fieldlabelradio" for="power">Power</label>
+							<br>
+                        </div> 
+						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <!-- <fieldset>
+                        <div class="form-card"> -->
+                            <!-- <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 3 - 3</h2>
+                                </div>
+                            </div> 
+							<label class="fieldlabels">Title: *</label> 
+							<input type="text" name="fname" placeholder="First Name" /> 
+							<label class="fieldlabels">Last Name: *</label> 
+							<input type="text" name="lname" placeholder="Last Name" /> 
+							<label class="fieldlabels">Contact No.: *</label> 
+							<input type="text" name="phno" placeholder="Contact No." /> 
+							<label class="fieldlabels">Alternate Contact No.: *</label> 
+							<input type="text" name="phno_2" placeholder="Alternate Contact No." />
+							 --><!--<label class="fieldlabels">Upload Your Photo:</label> 
+							<input type="file" name="pic" accept="image/*"> 
+							<label class="fieldlabels">Upload Signature Photo:</label> 
+							<input type="file" name="pic" accept="image/*">-->
+                        <!-- </div> 
+						<input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset> -->
+                    <fieldset>
+                        <div class="form-card">
+                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully created a challenge!</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+		
       </div>
     </div>
   </div>
 </div>
 
 
+<div class="modal fade" id="exampleModalCentersprinton" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<!-- multistep form -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg12 col-xl-12 text-center p-0 mb-2">
+            <div class="card-main-body px-5 pt-4 pb-0 mb-3">
+                <h2 id="heading">Create Challenge</h2>
+                <form id="msform" action="<?php echo base_url(); ?>create_challenge" method="POST">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="account"><strong>Define Event</strong></li>
+                        <li id="personal"><strong>Create your Badge</strong></li>
+                        <!-- <li id="payment"><strong>Summary</strong></li> -->
+						<li id="confirm"><strong>Finish</strong></li>
+                    </ul>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 1 - 3</h2>
+                                </div>
+                            </div>
+                            <input type="hidden" name="popular" value="stepon">
+                            <label class="fieldlabels">Name: *</label> 
+							<input type="text" name="name" placeholder="Name" /> 
+							<label class="fieldlabels">Start Date: *</label> 
+							<input type="date" name="start_time" placeholder="Start Date" /> 
+							<label class="fieldlabels">End Date: *</label> 
+							<input type="date" name="end_time" placeholder="End Date" /> 
+							<label class="fieldlabels">distance: *</label> 
+							<input type="number" name="distance" placeholder="distance" /> 
+							<label class="fieldlabels">speed: *</label> 
+							<input type="number" name="speed" placeholder="speed" /> 
+							<label class="fieldlabels">Message: </label> 
+							<textarea id="msg" rows="3" name="description"></textarea>
+							<label class="fieldlabels">Points: *</label> 
+							<input type="number" name="points" placeholder="Points" />
+							<label class="fieldlabels">Duration: *</label> 
+							<input type="number" name="duration" placeholder="Duration" />
+                        </div> 
+						<input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 2 - 3</h2>
+                                </div>
+                            </div> 
+							<input type="radio" id="name" name="b_name" value="30">
+							<label class="fieldlabels fieldlabelradio" for="standard">Standard</label>
+							<input type="radio" id="name" name="b_name" value="60">
+							<label class="fieldlabels fieldlabelradio" for="power">Power</label>
+							<br>
+                        </div> 
+						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <!-- <fieldset>
+                        <div class="form-card"> -->
+                            <!-- <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 3 - 3</h2>
+                                </div>
+                            </div> 
+							<label class="fieldlabels">Title: *</label> 
+							<input type="text" name="fname" placeholder="First Name" /> 
+							<label class="fieldlabels">Last Name: *</label> 
+							<input type="text" name="lname" placeholder="Last Name" /> 
+							<label class="fieldlabels">Contact No.: *</label> 
+							<input type="text" name="phno" placeholder="Contact No." /> 
+							<label class="fieldlabels">Alternate Contact No.: *</label> 
+							<input type="text" name="phno_2" placeholder="Alternate Contact No." />
+							 --><!--<label class="fieldlabels">Upload Your Photo:</label> 
+							<input type="file" name="pic" accept="image/*"> 
+							<label class="fieldlabels">Upload Signature Photo:</label> 
+							<input type="file" name="pic" accept="image/*">-->
+                        <!-- </div> 
+						<input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset> -->
+                    <fieldset>
+                        <div class="form-card">
+                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully created a challenge!</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+		
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<div class="modal fade" id="exampleModalCenterpedalon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<!-- multistep form -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg12 col-xl-12 text-center p-0 mb-2">
+            <div class="card-main-body px-5 pt-4 pb-0 mb-3">
+                <h2 id="heading">Create Challenge</h2>
+                <form id="msform" action="<?php echo base_url(); ?>create_challenge" method="POST">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="account"><strong>Define Event</strong></li>
+                        <li id="personal"><strong>Create your Badge</strong></li>
+                        <!-- <li id="payment"><strong>Summary</strong></li> -->
+						<li id="confirm"><strong>Finish</strong></li>
+                    </ul>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 1 - 3</h2>
+                                </div>
+                            </div>
+                            <input type="hidden" name="popular" value="pedalon">
+                            <label class="fieldlabels">Name: *</label> 
+							<input type="text" name="name" placeholder="Name" /> 
+							<label class="fieldlabels">Start Date: *</label> 
+							<input type="date" name="start_time" placeholder="Start Date" /> 
+							<label class="fieldlabels">End Date: *</label> 
+							<input type="date" name="end_time" placeholder="End Date" /> 
+							<label class="fieldlabels">Duration: *</label> 
+							<input type="number" name="duration" placeholder="Duration" />
+							<label class="fieldlabels">Speed: *</label> 
+							<input type="number" name="speed" placeholder="Speed" /> 
+							<label class="fieldlabels">Message: </label> 
+							<textarea id="msg" rows="3" name="description"></textarea>
+							<label class="fieldlabels">Points: *</label> 
+							<input type="number" name="points" placeholder="Points" />
+							<label class="fieldlabels">Duration: *</label> 
+							<input type="number" name="duration" placeholder="Duration" />
+                        </div> 
+						<input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 2 - 3</h2>
+                                </div>
+                            </div> 
+							<input type="radio" id="name" name="b_name" value="30">
+							<label class="fieldlabels fieldlabelradio" for="standard">Standard</label>
+							<input type="radio" id="name" name="b_name" value="60">
+							<label class="fieldlabels fieldlabelradio" for="power">Power</label>
+							<br>
+                        </div> 
+						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <!-- <fieldset>
+                        <div class="form-card"> -->
+                            <!-- <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 3 - 3</h2>
+                                </div>
+                            </div> 
+							<label class="fieldlabels">Title: *</label> 
+							<input type="text" name="fname" placeholder="First Name" /> 
+							<label class="fieldlabels">Last Name: *</label> 
+							<input type="text" name="lname" placeholder="Last Name" /> 
+							<label class="fieldlabels">Contact No.: *</label> 
+							<input type="text" name="phno" placeholder="Contact No." /> 
+							<label class="fieldlabels">Alternate Contact No.: *</label> 
+							<input type="text" name="phno_2" placeholder="Alternate Contact No." />
+							 --><!--<label class="fieldlabels">Upload Your Photo:</label> 
+							<input type="file" name="pic" accept="image/*"> 
+							<label class="fieldlabels">Upload Signature Photo:</label> 
+							<input type="file" name="pic" accept="image/*">-->
+                        <!-- </div> 
+						<input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset> -->
+                    <fieldset>
+                        <div class="form-card">
+                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully created a challenge!</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+		
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 

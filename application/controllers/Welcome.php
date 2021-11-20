@@ -24,7 +24,11 @@ class Welcome extends CI_Controller {
 		}else{
 			redirect('logout');
 		}
-		$this->load->view('welcome_message');
+		$this->load->model('Home_model');
+		$walkon = $this->Home_model->walkon_count();
+		$stepon = $this->Home_model->stepon_count();
+		$pedalon = $this->Home_model->pedalon_count();
+		$this->load->view('welcome_message',['walkon'=>$walkon,'stepon'=>$stepon,'pedalon'=>$pedalon]);
 	}
 
 	public function test(){

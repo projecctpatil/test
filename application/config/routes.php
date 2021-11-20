@@ -54,6 +54,7 @@ $route['Home'] = 'Home';
 $route['logout'] = 'Home/logout';
 $route['register'] = 'Home/register';
 $route['login'] = 'Home/login';
+$route['create_challenge'] = 'Home/create_challenge';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

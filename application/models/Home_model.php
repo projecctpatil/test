@@ -26,6 +26,61 @@ class Home_model extends CI_Model{
 	public function delete_user($id){
 		$sql = $this->db->where('id',$id)->delete('user');
 	}
+
+	public function create_challenge_model($data,$popular){
+		$sql = $this->db->insert($popular,$data);
+		if ($sql) {
+			return $this->db->insert_id();
+		} else {
+			return false;
+		}
+	}
+
+	public function create_badges_model($data){
+		$sql = $this->db->insert('live_badges',$data);
+		if ($sql) {
+			return $this->db->insert_id();
+		} else {
+			return false;
+		}
+	}
+
+	public function create_data_live_challenges_model($data){
+		$sql = $this->db->insert('live_challenges',$data);
+		if ($sql) {
+			return $this->db->insert_id();
+		} else {
+			return false;
+		}
+	}
+
+	public function walkon_count(){
+		$sql = $this->db->get('walkon');
+		if ($sql) {
+			return $sql->num_rows();
+		} else {
+			return false;
+		}
+	}
+
+	public function stepon_count(){
+		$sql = $this->db->get('stepon');
+		if ($sql) {
+			return $sql->num_rows();
+		} else {
+			return false;
+		}
+	}
+	
+	public function pedalon_count(){
+		$sql = $this->db->get('pedalon');
+		if ($sql) {
+			return $sql->num_rows();
+		} else {
+			return false;
+		}
+	}
+
 }
 
 ?>
