@@ -1,215 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
-
-<link rel="stylesheet" href="<?php echo base_url('assets/css/lnr-icon.css'); ?>">
-
-<link rel="stylesheet" href="<?php echo base_url('assets/css/all.min.css'); ?>">
-
-<link rel="stylesheet" href="<?php echo base_url('assets/css/slick.css'); ?>">
-<link rel="stylesheet" href="<?php echo base_url('assets/css/slick-theme.css'); ?>">
-
-<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
-<title>Brooch</title>
-
-
-</head>
-<body>
-
-<div class="inner-wrapper">
-	
-	<nav class="mnb navbar navbar-default">
-		<div class="top-header-section">
-			<div class="navbar-header">
-				<div style="padding: 15px 0;">
-					<a href="#" id="msbo"><i class="ic fa fa-bars"></i></a>
-				</div>
-			</div>
-		</div>
-		<div class="user-info align-right dropdown d-inline-flex header-dropdown">
-			<div class="user-details">
-				<h4><b>Welcome Admin!</b></h4>
-			</div>
-			<a href="javascript:void(0)" data-toggle="dropdown" class=" menu-style">
-				<div class="user-avatar d-inline-block">
-					<img src="assets/img/profiles/img-6.jpg" alt="user avatar" class="rounded-circle img-fluid" width="55">
-				</div>
-			</a>
-			<!--<div class="dropdown-menu dropdown-menu-right">
-				<a class="dropdown-item p-2" href="employment.html">
-					<span class="media align-items-center">
-						<span class="lnr lnr-user mr-3"></span>
-						<span class="media-body text-truncate">
-							<span class="text-truncate">Profile</span>
-						</span>
-					</span>
-				</a>
-				<a class="dropdown-item p-2" href="settings.html">
-					<span class="media align-items-center">
-						<span class="lnr lnr-cog mr-3"></span>
-						<span class="media-body text-truncate">
-							<span class="text-truncate">Settings</span>
-						</span>
-					</span>
-				</a>
-				<a class="dropdown-item p-2" href="login.html">
-					<span class="media align-items-center">
-						<span class="lnr lnr-power-switch mr-3"></span>
-						<span class="media-body text-truncate">
-							<span class="text-truncate">Logout</span>
-						</span>
-					</span>
-				</a>
-			</div>-->
-		</div>
-	</nav>
-	<div class="msb" id="msb">
-		<nav class="navbar navbar-default" role="navigation">
-				<div class="sidebar sidebar-user text-center shadow-sm">
-					<h4 class="text-dark">Admin Dashboard</h4>
-				</div>
-		
-
-			<!-- Main Menu -->
-			<div class="side-menu-container">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#"><span class="lnr lnr-home pr-0 pb-lg-2"></span><span class=""> Dashboard</span></a></li>
-					<li><a href="#"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Company</span></a></li>
-					<li><a href="#"><span class="lnr lnr-calendar-full pr-0 pb-lg-2"></span><span class=""> Calendar</span></a></li>
-					<li><a href="#"><span class="lnr lnr-star pr-0 pb-lg-2"></span><span class="">Reviews</span></a></li>
-					<li><a href="#"><span class="lnr lnr-rocket pr-0 pb-lg-2"></span><span class=""> Reports</span></a></li>
-					<li><a href="#"><span class="lnr lnr-cog pr-0 pb-lg-2"></span><span class=""> Settings</span></a></li>
-					<li><a href="#"><span class="lnr lnr-user pr-0 pb-lg-2"></span><span class=""> Profile</span></a></li>
-					<!--<li class="panel panel-default" id="dropdown">
-						<a data-toggle="collapse" href="#dropdown-lvl1">
-							<i class="fa fa-diamond"></i> Apps
-						  <span class="caret"></span>
-						</a>
-						<div id="dropdown-lvl1" class="panel-collapse collapse">
-							<div class="panel-body">
-								<ul class="nav navbar-nav">
-									<li><a href="#">Mail</a></li>
-									<li><a href="#">Calendar</a></li>
-									<li><a href="#">Ecommerce</a></li>
-									<li><a href="#">User</a></li>
-									<li><a href="#">Social</a></li>
-
-									
-									<li class="panel panel-default" id="dropdown">
-										<a data-toggle="collapse" href="#dropdown-lvl2">
-											<i class="glyphicon glyphicon-off"></i> Sub Level <span class="caret"></span>
-										</a>
-										<div id="dropdown-lvl2" class="panel-collapse collapse">
-											<div class="panel-body">
-												<ul class="nav navbar-nav">
-													<li><a href="#">Link</a></li>
-													<li><a href="#">Link</a></li>
-													<li><a href="#">Link</a></li>
-												</ul>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</li>-->
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</nav>  
-	</div>
+<?php include ('header.php'); ?>
 
 
 <div class="mcw">
 <div class="page-wrapper">
 	<div class="container-fluid">
 		<div class="row">
-			<!--<div class="col-xl-3 col-lg-4 col-md-12 theiaStickySidebar">
-				<aside class="sidebar sidebar-user">
-					<div class="row">
-						<div class="col-12">
-							<div class="card ctm-border-radius shadow-sm grow">
-								<div class="card-body py-4">
-									<div class="row">
-										<div class="col-md-12 mr-auto text-left">
-											<div class="custom-search input-group">
-												<div class="custom-breadcrumb">
-													<ol class="breadcrumb no-bg-color d-inline-block p-0 m-0 mb-2">
-														<li class="breadcrumb-item d-inline-block">
-															<a href="index.html" class="text-dark">Home</a>
-														</li>
-														<li class="breadcrumb-item d-inline-block active">Dashboard</li>
-													</ol>
-													<h4 class="text-dark">Admin Dashboard</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="user-card card shadow-sm bg-white text-center ctm-border-radius grow">
-						<div class="user-info card-body">
-							<div class="user-avatar mb-4">
-								<img src="assets/img/profiles/img-13.jpg" alt="User Avatar" class="img-fluid rounded-circle" width="100">
-							</div>
-							<div class="user-details">
-								<h4><b>Welcome Admin</b></h4>
-								<p>Sun, 29 Nov 2019</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="sidebar-wrapper d-lg-block d-md-none d-none">
-						<div class="card ctm-border-radius shadow-sm border-none grow">
-							<div class="card-body">
-								<div class="row no-gutters">
-									<div class="col-6 align-items-center text-center">
-										<a href="index.html" class="text-white active p-4 first-slider-btn ctm-border-right ctm-border-left ctm-border-top"><span class="lnr lnr-home pr-0 pb-lg-2 font-23"></span><span class="">Dashboard</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="employees.html" class="text-dark p-4 second-slider-btn ctm-border-right ctm-border-top"><span class="lnr lnr-users pr-0 pb-lg-2 font-23"></span><span class="">Employees</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="company.html" class="text-dark p-4 ctm-border-right ctm-border-left"><span class="lnr lnr-apartment pr-0 pb-lg-2 font-23"></span><span class="">Company</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="calendar.html" class="text-dark p-4 ctm-border-right"><span class="lnr lnr-calendar-full pr-0 pb-lg-2 font-23"></span><span class="">Calendar</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="leave.html" class="text-dark p-4 ctm-border-right ctm-border-left"><span class="lnr lnr-briefcase pr-0 pb-lg-2 font-23"></span><span class="">Leave</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="reviews.html" class="text-dark p-4 last-slider-btn ctm-border-right"><span class="lnr lnr-star pr-0 pb-lg-2 font-23"></span><span class="">Reviews</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="reports.html" class="text-dark p-4 ctm-border-right ctm-border-left"><span class="lnr lnr-rocket pr-0 pb-lg-2 font-23"></span><span class="">Reports</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="manage.html" class="text-dark p-4 ctm-border-right"><span class="lnr lnr-sync pr-0 pb-lg-2 font-23"></span><span class="">Manage</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="settings.html" class="text-dark p-4 last-slider-btn1 ctm-border-right ctm-border-left"><span class="lnr lnr-cog pr-0 pb-lg-2 font-23"></span><span class="">Settings</span></a>
-									</div>
-									<div class="col-6 align-items-center shadow-none text-center">
-										<a href="employment.html" class="text-dark p-4 last-slider-btn ctm-border-right"><span class="lnr lnr-user pr-0 pb-lg-2 font-23"></span><span class="">Profile</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</aside>
-			</div>-->
 			<div class="col-xl-12 col-lg-12  col-md-12">
 				<div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card grow">
 					<div class="card-body">
@@ -291,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<h4 class="card-title mb-0">Live Challenges</h4>
 							</div>
 							<?php if ($this->session->flashdata('create_challenge')) { ?>
-								<h4 class="alert alert-success" ><?php echo $this->session->flashdata('create_challenge'); ?></h4>
+								<p class="alert alert-success text-center" ><?php echo $this->session->flashdata('create_challenge'); ?></p>
 							<?php } ?>
 							
 							<div class="card-body">
@@ -299,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<ul class="List">
 										<li class="List-item">
 											<div class="list-item-title">
-												<h6>WalkOn</h6>
+												<span>WalkOn</span>
 												<button class="btn" data-toggle="modal" data-target="#exampleModalCenterwalkon">
 													<i class="fas fa-plus"></i>
 												</button>	
@@ -310,6 +109,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													</div>
 												</div>
 											</div>
+											<p>Diwali Challenge</p>
+											<p>20 active challenges</p>
 											<div class="more-graph-item text-center justify-content-center">
 												<button class="btn">More</button>
 											</div>
@@ -317,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								  
 										<li class="List-item">
 											<div class="list-item-title">
-												<h6>SprintOn</h6>
+												<span>SprintOn</span>
 												<button class="btn" data-toggle="modal" data-target="#exampleModalCentersprinton"><i class="fas fa-plus"></i></button>
 											</div>
 											<div class="circle_percent" data-percent="<?php echo $stepon; ?>">
@@ -325,6 +126,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<div class="round_per"></div>
 												</div>
 											</div>
+											<p>Diwali Challenge</p>
+											<p>20 active challenges</p>
 											<div class="more-graph-item text-center justify-content-center">
 												<button class="btn">More</button>
 											</div>
@@ -332,7 +135,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									  
 										<li class="List-item">
 											<div class="list-item-title">
-												<h6>PedalOn</h6>
+												<span>PedalOn</span>
 												<button class="btn" data-toggle="modal" data-target="#exampleModalCenterpedalon"><i class="fas fa-plus"></i></button>
 											</div>
 											<div class="circle_percent" data-percent="<?php echo $pedalon; ?>">
@@ -340,6 +143,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<div class="round_per"></div>
 												</div>
 											</div>
+											<p>Diwali Challenge</p>
+											<p>20 active challenges</p>
 											<div class="more-graph-item text-center justify-content-center">
 												<button class="btn">More</button>
 											</div>
@@ -855,28 +660,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div> 
 						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                     </fieldset>
-                    <!-- <fieldset>
-                        <div class="form-card"> -->
-                            <!-- <div class="row">
-                                <div class="col">
-                                    <h2 class="steps">Step 3 - 3</h2>
-                                </div>
-                            </div> 
-							<label class="fieldlabels">Title: *</label> 
-							<input type="text" name="fname" placeholder="First Name" /> 
-							<label class="fieldlabels">Last Name: *</label> 
-							<input type="text" name="lname" placeholder="Last Name" /> 
-							<label class="fieldlabels">Contact No.: *</label> 
-							<input type="text" name="phno" placeholder="Contact No." /> 
-							<label class="fieldlabels">Alternate Contact No.: *</label> 
-							<input type="text" name="phno_2" placeholder="Alternate Contact No." />
-							 --><!--<label class="fieldlabels">Upload Your Photo:</label> 
-							<input type="file" name="pic" accept="image/*"> 
-							<label class="fieldlabels">Upload Signature Photo:</label> 
-							<input type="file" name="pic" accept="image/*">-->
-                        <!-- </div> 
-						<input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset> -->
                     <fieldset>
                         <div class="form-card">
                             <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
@@ -965,28 +748,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div> 
 						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                     </fieldset>
-                    <!-- <fieldset>
-                        <div class="form-card"> -->
-                            <!-- <div class="row">
-                                <div class="col">
-                                    <h2 class="steps">Step 3 - 3</h2>
-                                </div>
-                            </div> 
-							<label class="fieldlabels">Title: *</label> 
-							<input type="text" name="fname" placeholder="First Name" /> 
-							<label class="fieldlabels">Last Name: *</label> 
-							<input type="text" name="lname" placeholder="Last Name" /> 
-							<label class="fieldlabels">Contact No.: *</label> 
-							<input type="text" name="phno" placeholder="Contact No." /> 
-							<label class="fieldlabels">Alternate Contact No.: *</label> 
-							<input type="text" name="phno_2" placeholder="Alternate Contact No." />
-							 --><!--<label class="fieldlabels">Upload Your Photo:</label> 
-							<input type="file" name="pic" accept="image/*"> 
-							<label class="fieldlabels">Upload Signature Photo:</label> 
-							<input type="file" name="pic" accept="image/*">-->
-                        <!-- </div> 
-						<input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset> -->
                     <fieldset>
                         <div class="form-card">
                             <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
@@ -1074,28 +835,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div> 
 						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                     </fieldset>
-                    <!-- <fieldset>
-                        <div class="form-card"> -->
-                            <!-- <div class="row">
-                                <div class="col">
-                                    <h2 class="steps">Step 3 - 3</h2>
-                                </div>
-                            </div> 
-							<label class="fieldlabels">Title: *</label> 
-							<input type="text" name="fname" placeholder="First Name" /> 
-							<label class="fieldlabels">Last Name: *</label> 
-							<input type="text" name="lname" placeholder="Last Name" /> 
-							<label class="fieldlabels">Contact No.: *</label> 
-							<input type="text" name="phno" placeholder="Contact No." /> 
-							<label class="fieldlabels">Alternate Contact No.: *</label> 
-							<input type="text" name="phno_2" placeholder="Alternate Contact No." />
-							 --><!--<label class="fieldlabels">Upload Your Photo:</label> 
-							<input type="file" name="pic" accept="image/*"> 
-							<label class="fieldlabels">Upload Signature Photo:</label> 
-							<input type="file" name="pic" accept="image/*">-->
-                        <!-- </div> 
-						<input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset> -->
                     <fieldset>
                         <div class="form-card">
                             <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
@@ -1121,24 +860,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </div>
 
-<div class="sidebar-overlay" id="sidebar_overlay"></div>
 
-<script src="<?php echo base_url('assets/js/jquery-3.2.1.min.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/slick.min.js'); ?>"></script>
-
-<script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
-
-<script src="<?php echo base_url('assets/js/all.min.js'); ?>"></script>
-
-<script src="<?php echo base_url('assets/js/Chart.min.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/chart.js'); ?>"></script>
-
-<script src="<?php echo base_url('assets/plugins/theia-sticky-sidebar/ResizeSensor.js'); ?>"></script>
-<script src="<?php echo base_url('assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js'); ?>"></script>
-
-<script src="<?php echo base_url('assets/js/script.js'); ?>"></script>
-
-
+<?php include ('footer.php'); ?>
 
 
 

@@ -1,6 +1,18 @@
 (function () {
     "use strict";
 	
+	
+	$(document).ready(function(){
+	  $('#msbo').on('click', function(){
+		$('body').toggleClass('msb-x');
+	  });
+	});
+	
+	
+	
+	
+	
+	
 $(document).ready(function(){
 
 var current_fs, next_fs, previous_fs; //fieldsets

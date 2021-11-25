@@ -1600,7 +1600,7 @@ textarea.form-control {
   border-radius:50%;
   overflow:hidden;
   display:inline-block;
-  margin:20px;
+  margin:10px 20px 0px;
 }
 .circle_inner {
   position: absolute;
@@ -1652,7 +1652,7 @@ textarea.form-control {
   z-index: 3;
 }
 .Content {
-  height: 210px;
+  /* height: 210px; */
   display:grid;
   width: 100%;
 }
@@ -1673,20 +1673,26 @@ textarea.form-control {
     padding: 0px 10px;
     color: #fff;
 	height:30px;
+	float: right;
 }
 .list-item-title{
-	display:flex;
+	/* display:flex; */
 	margin-bottom:15px;
+	padding: 0px 5px;
 }
 .list-item-title h6{
 	width:60%;
 	padding: 7px 0px;
     margin: 0px;
 }
+.List-item p{
+	text-align:center;
+	font-weight:700;
+}
 .more-graph-item{
-	position:absolute;
+	/* position:absolute; */
 	bottom:20px;
-	width:26%;
+	/* width:26%; */
 	margin-bottom:10px;
 }
 .more-graph-item .btn{
@@ -2693,7 +2699,7 @@ body.msb-x .msb {
 #progressbar li {
     list-style-type: none;
     font-size: 15px;
-    width: 25%;
+    width: 33%;
     float: left;
     position: relative;
     font-weight: 400
