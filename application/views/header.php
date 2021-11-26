@@ -12,6 +12,8 @@
 
 <link rel="stylesheet" href="<?php echo base_url('assets/css/all.min.css'); ?>">
 
+<link rel="stylesheet" href="<?php echo base_url('assets/css/dataTables.bootstrap4.min.css'); ?>">
+
 <link rel="stylesheet" href="<?php echo base_url('assets/css/slick.css'); ?>">
 <link rel="stylesheet" href="<?php echo base_url('assets/css/slick-theme.css'); ?>">
 

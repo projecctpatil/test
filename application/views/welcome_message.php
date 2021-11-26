@@ -112,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<p>Diwali Challenge</p>
 											<p>20 active challenges</p>
 											<div class="more-graph-item text-center justify-content-center">
-												<button class="btn">More</button>
+												<a href="challengelist.php" class="btn">More</a>
 											</div>
 										</li>
 								  
@@ -129,7 +129,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<p>Diwali Challenge</p>
 											<p>20 active challenges</p>
 											<div class="more-graph-item text-center justify-content-center">
-												<button class="btn">More</button>
+												<a href="challengelist.php" class="btn">More</a>
 											</div>
 										</li>
 									  
@@ -146,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<p>Diwali Challenge</p>
 											<p>20 active challenges</p>
 											<div class="more-graph-item text-center justify-content-center">
-												<button class="btn">More</button>
+												<a href="challengelist.php" class="btn">More</a>
 											</div>
 										</li>
 									
