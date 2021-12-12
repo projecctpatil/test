@@ -47,16 +47,16 @@
 					<h4 class="text-dark">Admin Dashboard</h4>
 				</div>
 		
-
+				
 			<!-- Main Menu -->
 			<div class="side-menu-container">
 				<ul class="nav navbar-nav">
-					<li><a href="index.php"><span class="lnr lnr-home pr-0 pb-lg-2"></span><span class=""> Dashboard</span></a></li>
-					<li><a href="employee.php"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Employees </span></a></li>
-					<li class="active"><a href="company.php"><span class="lnr lnr-calendar-full pr-0 pb-lg-2"></span><span class=""> Company </span></a></li>
-					<li><a href="#"><span class="lnr lnr-star pr-0 pb-lg-2"></span><span class="">Testimonial </span></a></li>
-					<li><a href="#"><span class="lnr lnr-rocket pr-0 pb-lg-2"></span><span class=""> Reports</span></a></li>
-					<li><a href="#"><span class="lnr lnr-exit-up pr-0 pb-lg-2"></span><span class=""> Logout </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == '') ? 'active' : ''; ?>"><a href="index.php"><span class="lnr lnr-home pr-0 pb-lg-2"></span><span class=""> Dashboard</span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'employee') ? 'active' : ''; ?>"><a href="employee"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Employees </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'company') ? 'active' : ''; ?>"><a href="company"><span class="lnr lnr-calendar-full pr-0 pb-lg-2"></span><span class=""> Company </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'Testimonial') ? 'active' : ''; ?>"><a href="#"><span class="lnr lnr-star pr-0 pb-lg-2"></span><span class="">Testimonial </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'Reports') ? 'active' : ''; ?>"><a href="#"><span class="lnr lnr-rocket pr-0 pb-lg-2"></span><span class=""> Reports</span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'Logout') ? 'active' : ''; ?>"><a href="#"><span class="lnr lnr-exit-up pr-0 pb-lg-2"></span><span class=""> Logout </span></a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</nav>  

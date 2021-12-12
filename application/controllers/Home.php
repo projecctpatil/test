@@ -164,6 +164,14 @@ class Home extends CI_Controller{
 
 		}
 	}
+
+	public function company(){
+		$this->load->view('company');
+	}
+
+	public function employee(){
+		$this->load->view('employee');
+	}
 }
 
 ?>
