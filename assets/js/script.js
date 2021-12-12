@@ -2,6 +2,73 @@
     "use strict";
 	
 	
+   $(document).ready(function(){
+  $('.carouseloffers').slick({
+        dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-angle-left"></i></button>',
+          nextArrow: '<button class="slide-arrow next-arrow"><i class="fas fa-angle-right"></i></button>',
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+  });
+});
+
+
+
+  document.querySelectorAll(".bar").forEach(function(current) {
+    let startWidth = 0;
+    const endWidth = current.dataset.size;
+    
+    /* 
+    setInterval() time sholud be set as trasition time / 100. 
+    In our case, 2 seconds / 100 = 20 milliseconds. 
+    */
+    const interval = setInterval(frame, 20);
+
+    function frame() {
+      if (startWidth >= endWidth) {
+        clearInterval(interval);
+      } else {
+          startWidth++;
+          current.style.width = `${endWidth}%`;
+          current.firstElementChild.innerText = `${startWidth}%`;
+        }
+     }
+  });
+
+
+setTimeout(loading, 1000);
+
+
 	$(document).ready(function(){
 	  $('#msbo').on('click', function(){
 		$('body').toggleClass('msb-x');

@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/lnr-icon.css'); ?>">
 
 <link rel="stylesheet" href="<?php echo base_url('assets/css/all.min.css'); ?>">
+<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.min.css'); ?>">
 
 <link rel="stylesheet" href="<?php echo base_url('assets/css/dataTables.bootstrap4.min.css'); ?>">
 
