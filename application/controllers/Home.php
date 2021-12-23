@@ -7,14 +7,21 @@ class Home extends CI_Controller{
 
 	public function __construct(){
 		parent::__construct();
+		if ($this->session->userdata('username')){
+			// echo 'yes';
+		}else{
+			redirect('logout');
+		}
 		$this->load->model('Home_model');
 		
 	}
 		
 	public function index(){
 		// $this->load->model('Home_model');
-		$data['result'] = $this->Home_model->select();
-		$this->load->view('Home_view',$data);
+		$walkon = $this->Home_model->walkon_count();
+		$stepon = $this->Home_model->stepon_count();
+		$pedalon = $this->Home_model->pedalon_count();
+		$this->load->view('welcome_message',['walkon'=>$walkon,'stepon'=>$stepon,'pedalon'=>$pedalon]);
 	}
 
 	public function create_user($name){
@@ -167,6 +174,31 @@ class Home extends CI_Controller{
 
 	public function company(){
 		$this->load->view('company');
+	}
+
+	public function add_company(){
+		$data = [
+					'company_name' => $this->input->post('company_name'),
+					'registered_company_number' => $this->input->post('registered_company_number'),
+					'Email' => $this->input->post('email'),
+					'contact_number' => $this->input->post('contact_number'),
+					'date' => $this->input->post('date'),
+					'vat_number' => $this->input->post('vat_number'),
+					'address_line_1' => $this->input->post('address_line_1'),
+					'address_line_2' => $this->input->post('address_line_2'),
+					'city' => $this->input->post('city'),
+					'country' => $this->input->post('country'),
+					'post_code' => $this->input->post('post_code'),
+					'c_date' => $this->input->post('c_date')
+				];
+		$insert = $this->Home_model->add_company_model($data);
+		if ($insert) {
+			$this->session->set_flashdata('add_company','Company add success fully !');
+			redirect('company');
+		} else {
+			$this->session->set_flashdata('not_company','Company Not added !');
+			redirect('company');
+		}
 	}
 
 	public function employee(){

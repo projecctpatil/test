@@ -35,7 +35,7 @@
 					<img src="<?php echo base_url('assets/img/cycling1.png'); ?>" alt="" />
 				</div>
 				<div class="formBx text-center justify-content-center">
-					<form action="<?php echo base_url('index.php/Home/login'); ?>" method="post" onsubmit="return;">
+					<form action="<?php echo base_url('login'); ?>" method="post" onsubmit="return;">
 						<h2 class="alert alert-success" ><?php echo $this->session->flashdata('login'); ?></h2>
 						<h2>Sign In</h2>
 						<input type="text" name="email" placeholder="Email ID/User ID" />
@@ -60,10 +60,9 @@
 					</ul>
 					<div class="tab-content" id="myTabContent">
 						<div class="tab-pane fade show active" id="home-tab2" role="tabpanel" aria-labelledby="home-tab">
-							<form action="<?php echo base_url('Home/register'); ?>" onsubmit="return;" method="POST">
-								<h2>Create an account</h2>
+							<form action="<?php echo base_url('Home/company_login'); ?>" onsubmit="return;" method="POST">
+								<h2>Login</h2>
 								<input type="email" name="email" placeholder="Company Email ID" />
-								<input type="text" name="c_name" placeholder="Company Name" />
 								<input type="Number" name="p_number" placeholder="Phone Number" />
 								<input type="submit" name="" value="Sign Up" />
 								<p class="signup"> Already have an account ?
@@ -73,7 +72,7 @@
 						</div>
 						<div class="tab-pane fade" id="profile-tab2" role="tabpanel" aria-labelledby="profile-tab">
 							<form action="" onsubmit="return false;">
-								<h2>Create an account</h2>
+								<h2>Login</h2>
 								<input type="email" name="" placeholder="Personal Email ID" />
 								<input type="Number" name="" placeholder="Phone Number" />
 								<input type="submit" name="" value="Sign Up" />

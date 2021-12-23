@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12  col-md-12">
-				<div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card grow">
+				<!-- <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card grow">
 					<div class="card-body">
 						<div class="d-flex justify-content-between align-items-center breaking-news bg-white">
 							<div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</marquee>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="row">
 					<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">

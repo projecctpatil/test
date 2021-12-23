@@ -3,7 +3,7 @@
 class Home_model extends CI_Model{
 	public function checkLogin($username,$password){
 		$sql = $this->db->where(['username'=>$username,'password'=>$password])->get('employers');
-		if ($sql) {
+		if ($sql->num_rows()) {
 			return true;
 		} else {
 			return false;
@@ -76,6 +76,15 @@ class Home_model extends CI_Model{
 		$sql = $this->db->get('pedalon');
 		if ($sql) {
 			return $sql->num_rows();
+		} else {
+			return false;
+		}
+	}
+
+	public function add_company_model($data){
+		$sql = $this->db->insert('company_detele',$data);
+		if ($sql) {
+			return true;
 		} else {
 			return false;
 		}
