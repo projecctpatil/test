@@ -201,8 +201,38 @@ class Home extends CI_Controller{
 		}
 	}
 
-	public function employee(){
-		$this->load->view('employee');
+	public function add_employee(){
+		$data = [
+					'company_name' => $this->input->post('company_name'),
+					'email' => $this->input->post('email'),
+					'contact_number' => $this->input->post('contact_number'),
+					'date' => $this->input->post('date'),
+					'password' => $this->input->post('password'),
+					'address_line_1' => $this->input->post('address_line_1'),
+					'address_line_2' => $this->input->post('address_line_2'),
+					'city' => $this->input->post('city'),
+					'country' => $this->input->post('country'),
+					'post_code' => $this->input->post('post_code'),
+					'c_date' => $this->input->post('c_date')
+				];
+		$insert = $this->Home_model->add_employee_model($data);
+		if ($insert) {
+			$this->session->set_flashdata('add_employee','Employe add success fully !');
+			redirect('company_list');
+		} else {
+			$this->session->set_flashdata('not_employee','Employe Not added !');
+			redirect('company_list');
+		}
+	}
+
+	public function company_list(){
+		$result = $this->Home_model->select_company_list();
+		$this->load->view('company_list',['result'=>$result]);
+	}
+
+	public function add_emp(){
+		$company = $this->uri->segment(3);
+		$this->load->view('employee',['company'=>$company]);
 	}
 }
 

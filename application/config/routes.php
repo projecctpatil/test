@@ -54,11 +54,14 @@ $route['Home'] = 'Home';
 $route['logout'] = 'welcome/logout';
 $route['company_login'] = 'welcome/company_login';
 $route['login'] = 'welcome/login';
+$route['employee_login'] = 'welcome/employee_login';
 $route['create_challenge'] = 'Home/create_challenge';
 $route['company'] = 'Home/company';
 $route['add_company'] = 'Home/add_company';
-$route['employee'] = 'Home/employee';
+$route['company_list'] = 'Home/company_list';
+$route['add_emp/(:any)/(:any)'] = 'Home/add_emp/$1/$2';
 $route['test'] = 'welcome/test';
+$route['add_employee'] = 'Home/add_employee';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

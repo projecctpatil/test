@@ -10,6 +10,15 @@ class Home_model extends CI_Model{
 		}
 	}
 
+	public function checkempLogin($username,$password){
+		$sql = $this->db->where(['username'=>$username,'password'=>$password])->get('employers');
+		if ($sql->num_rows()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public function create_employers($data){
 		$sql = $this->db->insert('employers',$data);
 		if ($sql) {
@@ -83,6 +92,24 @@ class Home_model extends CI_Model{
 
 	public function add_company_model($data){
 		$sql = $this->db->insert('company_detele',$data);
+		if ($sql) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function select_company_list(){
+		$sql = $this->db->get('company_detele');
+		if ($sql->num_rows()) {
+			return $sql->result_array();
+		} else {
+			return false;
+		}
+	}
+
+	public function add_employee_model($data){
+		$sql = $this->db->insert('employers',$data);
 		if ($sql) {
 			return true;
 		} else {

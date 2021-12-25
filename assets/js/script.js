@@ -1,6 +1,9 @@
 (function () {
     "use strict";
 	
+  $(document).ready(function() {
+        $('#example').DataTable();
+    } );
 	
    $(document).ready(function(){
   $('.carouseloffers').slick({
@@ -76,9 +79,7 @@ setTimeout(loading, 1000);
 	});
 	
 	
-	$(document).ready(function() {
-        $('#example').DataTable();
-    } );
+	
 	
 	
 	

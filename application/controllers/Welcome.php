@@ -39,6 +39,18 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	public function employee_login(){
+		$this->load->model('Home_model');
+		$result = $this->Home_model->checkempLogin($this->input->post('u_name') , $this->input->post('password'));
+		if ($result) {
+			$this->session->set_userdata('username',$this->input->post('u_name'));
+			redirect('employee_dashboard');
+		} else {
+			$this->session->set_flashdata('login','Please type right user id and password !');
+			redirect('logout');
+		}
+	}
+
 	public function company_login(){
 		$this->load->model('Home_model');
 		$result = $this->Home_model->checkLogin($this->input->post('email') , $this->input->post('password'));

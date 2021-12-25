@@ -71,11 +71,11 @@
 							</form>
 						</div>
 						<div class="tab-pane fade" id="profile-tab2" role="tabpanel" aria-labelledby="profile-tab">
-							<form action="" onsubmit="return false;">
+							<form action="<?php echo base_url('Home/employee_login'); ?>" onsubmit="return false;">
 								<h2>Login</h2>
-								<input type="email" name="" placeholder="Personal Email ID" />
-								<input type="Number" name="" placeholder="Phone Number" />
-								<input type="submit" name="" value="Sign Up" />
+								<input type="text" name="u_name" placeholder="Personal Email ID" />
+								<input type="password" name="password" placeholder="Password" />
+								<input type="submit" name="submit" value="Sign Up" />
 								<p class="signup"> Already have an account ?
 									<a href="#" onclick="toggleForm();">Sign in.</a>
 								</p>

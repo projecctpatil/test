@@ -1,116 +1,114 @@
+<?php include ('header.php'); ?>
 
-	<?php include ('header.php'); ?>
 
 	<div class="mcw">
 		<div class="page-wrapper">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xl-12 col-lg-12 col-md-12">
-						<div class="card shadow-sm ctm-border-radius grow">
-							<div class="card-header d-flex align-items-center justify-content-between">
-								<h4 class="card-title mb-0 d-inline-block">Employees</h4>
-							</div>
-							<div class="card-body align-center">
-								<div class="employee-office-table">
-									<div class="table-responsive">
-
-										<table id="example" class="table table-striped table-bordered" style="width:100%">
-									        <thead>
-									            <tr>
-									                <th>Name</th>
-									                <th>Position</th>
-									                <th>Office</th>
-									                <th>Age</th>
-									                <th>Start date</th>
-									                <th>Action</th>
-									            </tr>
-									        </thead>
-									        <tbody>
-									            <tr>
-									                <td>
-									                	<a href="#" class="avatar"><img class="img-fluid" alt="avatar image" src="assets/img/profiles/img-10.jpg"></a>
-														<h2><a href="employment.html"> Richard Wilson</a></h2>
-									                </td>
-									                <td>System Architect</td>
-									                <td>Edinburgh</td>
-									                <td>61</td>
-									                <td>2011/04/25</td>
-									                <td>
-									                	<div class="table-action">
-															<a href="edit-review.html" class="btn btn-sm btn-outline-success">
-															<span class="lnr lnr-pencil"></span> Edit
-															</a>
-															<a href="javascript:void(0);" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete">
-															<span class="lnr lnr-trash"></span> Delete
-															</a>
-														</div>
-									                </td>
-									            </tr>
-									            <tr>
-									                <td>
-									                	<a href="#" class="avatar"><img class="img-fluid" alt="avatar image" src="assets/img/profiles/img-10.jpg"></a>
-														<h2><a href="employment.html"> Richard Wilson</a></h2>
-									                </td>
-									                <td>Accountant</td>
-									                <td>Tokyo</td>
-									                <td>63</td>
-									                <td>2011/07/25</td>
-									                <td>
-									                	<div class="table-action">
-															<a href="edit-review.html" class="btn btn-sm btn-outline-success">
-															<span class="lnr lnr-pencil"></span> Edit
-															</a>
-															<a href="javascript:void(0);" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete">
-															<span class="lnr lnr-trash"></span> Delete
-															</a>
-														</div>
-									                </td>
-									            </tr>
-									            <tr>
-									                <td>
-									                	<a href="#" class="avatar"><img class="img-fluid" alt="avatar image" src="assets/img/profiles/img-10.jpg"></a>
-														<h2><a href="employment.html"> Richard Wilson</a></h2>
-									                </td>
-									                <td>Junior Technical Author</td>
-									                <td>San Francisco</td>
-									                <td>66</td>
-									                <td>2009/01/12</td>
-									                <td>
-									                	<div class="table-action">
-															<a href="edit-review.html" class="btn btn-sm btn-outline-success">
-															<span class="lnr lnr-pencil"></span> Edit
-															</a>
-															<a href="javascript:void(0);" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete">
-															<span class="lnr lnr-trash"></span> Delete
-															</a>
-														</div>
-									                </td>
-									            </tr>
-									            <tr>
-									                <td>
-									                	<a href="#" class="avatar"><img class="img-fluid" alt="avatar image" src="assets/img/profiles/img-10.jpg"></a>
-														<h2><a href="employment.html"> Richard Wilson</a></h2>
-									                </td>
-									                <td>Senior Javascript Developer</td>
-									                <td>Edinburgh</td>
-									                <td>22</td>
-									                <td>2012/03/29</td>
-									                <td>
-									                	<div class="table-action">
-															<a href="edit-review.html" class="btn btn-sm btn-outline-success">
-															<span class="lnr lnr-pencil"></span> Edit
-															</a>
-															<a href="javascript:void(0);" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete">
-															<span class="lnr lnr-trash"></span> Delete
-															</a>
-														</div>
-									                </td>
-									            </tr>
-									        </tbody>
-									    </table>
+						<div class="row">
+							<div class="col-md-12 d-flex">
+								<div class="card ctm-border-radius shadow-sm grow flex-fill">
+									<div class="card-header">
+										<h4 class="card-title mb-0">Company Details</h4>
+									</div>
+									<?php if ($this->session->flashdata('add_company')) { ?>
+										<p class="alert alert-success text-center" ><?php echo $this->session->flashdata('add_company'); ?></p>
+									<?php } ?>
+									<?php if ($this->session->flashdata('not_company')) { ?>
+										<p class="alert alert-danger text-center" ><?php echo $this->session->flashdata('not_company'); ?></p>
+									<?php } ?>
+									<form action="add_employee" method="POST">
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="company_name" type="text" readonly value="<?php echo $company; ?>" placeholder="Company Name">
+													<input class="form-control" name="c_date" type="hidden" value="<?php echo date('d-m-yy'); ?>" placeholder="c_date">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="email" type="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="contact_number" type="number" placeholder="Contact number">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control datetimepicker" name="date" type="date" placeholder="Incorporation Date">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="vat_number" type="password" placeholder="Password">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="address_line_1" type="text" placeholder="address_line_1">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="address_line_2" type="text" placeholder="Address Line2">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="city" type="text" placeholder="City">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="country" type="text" placeholder="Country">
+												</div>
+											</div>
+											<div class="form-group col-xl-6 col-lg-6 col-md-12">
+												<div class="input-group mb-3">
+													<input class="form-control" name="post_code" type="number" placeholder="Post-Code">
+												</div>
+											</div>
+											<div class="form-group col-xl-12 col-lg-12 col-md-12">
+												<div class="input-group mb-3">
+													<button class="btn btn-success text-white" type="submit"> Submit </button>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+							</form>
+							<!--<div class="col-md-5 d-flex">
+								<div class="card ctm-border-radius shadow-sm grow flex-fill">
+									<div class="card-header">
+										<h4 class="card-title mb-0">
+											Contact
+										</h4>
+									</div>
+									<div class="card-body">
+										<div class="input-group mb-3">
+											<input type="text" class="form-control" placeholder="Contact" value="07448503267">
+											<div class="input-group-append">
+												<button class="btn btn-theme text-white" type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+											</div>
+										</div>
+										<div class="input-group mb-3">
+											<input type="text" class="form-control" placeholder="focustechnology.com">
+											<div class="input-group-append">
+												<button class="btn btn-theme text-white" type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+											</div>
+										</div>
+										<div class="input-group mb-0">
+											<input type="email" class="form-control" placeholder="hr@focustechnology.com">
+											<div class="input-group-append">
+												<button class="btn btn-theme text-white" type="button"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>-->
 						</div>
 					</div>
 				</div>
@@ -119,9 +117,10 @@
 	</div>
 </div>
 
+<div class="sidebar-overlay" id="sidebar_overlay"></div>
+
+
 <?php include ('footer.php'); ?>
-
-
 
 
 </body>
