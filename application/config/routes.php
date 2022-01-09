@@ -63,5 +63,11 @@ $route['add_emp/(:any)/(:any)'] = 'Home/add_emp/$1/$2';
 $route['test'] = 'welcome/test';
 $route['add_employee'] = 'Home/add_employee';
 
+$route['company_login_d'] = 'welcome/company_login_d';
+$route['company_dashbord'] = 'Home/company_dashbord';
+
+$route['emp_list'] = 'Home/emp_list';
+$route['employee_dashboard'] = 'Home/employee_dashboard';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

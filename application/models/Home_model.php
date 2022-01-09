@@ -2,7 +2,16 @@
 
 class Home_model extends CI_Model{
 	public function checkLogin($username,$password){
-		$sql = $this->db->where(['username'=>$username,'password'=>$password])->get('employers');
+		$sql = $this->db->where(['username'=>$username,'password'=>$password])->get('admin');
+		if ($sql->num_rows()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function check_company_Login($username,$password){
+		$sql = $this->db->where(['email'=>$username,'password'=>$password])->get('company_detele');
 		if ($sql->num_rows()) {
 			return true;
 		} else {
@@ -112,6 +121,24 @@ class Home_model extends CI_Model{
 		$sql = $this->db->insert('employers',$data);
 		if ($sql) {
 			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function getcompany($email){
+		$sql = $this->db->where('email',$email)->get('company_detele');
+		if ($sql->num_rows()) {
+			return $sql->result_array();
+		} else {
+			return false;
+		}
+	}
+
+	public function getemp($email){
+		$sql = $this->db->where('username',$email)->get('employers');
+		if ($sql->num_rows()) {
+			return $sql->result_array();
 		} else {
 			return false;
 		}

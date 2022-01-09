@@ -73,6 +73,7 @@ class Welcome extends CI_Controller {
 			'username' => $user_name,
 			'password' => $password,
 			'admin_ids' => $user_name . ' | ' . $password . ' | ' . $this->input->post('p_number') . ' | ' .$this->input->post('email'),
+			'email' => $this->input->post('email')
 		];
 		
 		$result = $this->Home_model->create_employers($data);
@@ -105,5 +106,17 @@ class Welcome extends CI_Controller {
 
 	public function test(){
 		$this->load->view('register');
+	}
+
+	public function company_login_d(){
+		$this->load->model('Home_model');
+		$result = $this->Home_model->check_company_Login($this->input->post('email') , $this->input->post('password'));
+		if ($result) {
+			$this->session->set_userdata('username',$this->input->post('email'));
+			redirect('company_dashbord');
+		} else {
+			$this->session->set_flashdata('login','Please type right user id and password !');
+			redirect('logout');
+		}
 	}
 }

@@ -41,8 +41,8 @@
 						<input type="text" name="email" placeholder="Email ID/User ID" />
 						<input type="password" name="password" placeholder="Password" />
 						<input type="submit" name="" value="Login" />
-						<p class="signup">Don't have an account ?
-							<a href="#" onclick="toggleForm();">Sign Up.</a>
+						<p class="signup">Login to Company Or Employe ?
+							<a href="#" onclick="toggleForm();">Login.</a>
 						</p>
 					</form>
 				</div>
@@ -60,24 +60,24 @@
 					</ul>
 					<div class="tab-content" id="myTabContent">
 						<div class="tab-pane fade show active" id="home-tab2" role="tabpanel" aria-labelledby="home-tab">
-							<form action="<?php echo base_url('Home/company_login'); ?>" onsubmit="return;" method="POST">
+							<form action="<?php echo base_url('company_login_d'); ?>" onsubmit="return;" method="POST">
 								<h2>Login</h2>
 								<input type="email" name="email" placeholder="Company Email ID" />
-								<input type="Number" name="p_number" placeholder="Phone Number" />
-								<input type="submit" name="" value="Sign Up" />
-								<p class="signup"> Already have an account ?
-									<a href="#" onclick="toggleForm();">Sign in.</a>
+								<input type="password" name="password" placeholder="Password" />
+								<input type="submit" name="" value="Login" />
+								<p class="signup"> You have an account for employe ?
+									<a href="#" onclick="toggleForm();">Login.</a>
 								</p>
 							</form>
 						</div>
 						<div class="tab-pane fade" id="profile-tab2" role="tabpanel" aria-labelledby="profile-tab">
-							<form action="<?php echo base_url('Home/employee_login'); ?>" onsubmit="return false;">
+							<form action="<?php echo base_url('employee_login'); ?>" onsubmit="return;" method="post">
 								<h2>Login</h2>
 								<input type="text" name="u_name" placeholder="Personal Email ID" />
 								<input type="password" name="password" placeholder="Password" />
-								<input type="submit" name="submit" value="Sign Up" />
-								<p class="signup"> Already have an account ?
-									<a href="#" onclick="toggleForm();">Sign in.</a>
+								<input type="submit" name="" value="Login" />
+								<p class="signup"> You have an account for company ?
+									<a href="#" onclick="toggleForm();">Login.</a>
 								</p>
 							</form>
 						</div>

@@ -177,6 +177,8 @@ class Home extends CI_Controller{
 	}
 
 	public function add_company(){
+		$this->load->helper('string');
+		$password = random_string('alpha',10);
 		$data = [
 					'company_name' => $this->input->post('company_name'),
 					'registered_company_number' => $this->input->post('registered_company_number'),
@@ -189,7 +191,8 @@ class Home extends CI_Controller{
 					'city' => $this->input->post('city'),
 					'country' => $this->input->post('country'),
 					'post_code' => $this->input->post('post_code'),
-					'c_date' => $this->input->post('c_date')
+					'c_date' => $this->input->post('c_date'),
+					'password' => $password
 				];
 		$insert = $this->Home_model->add_company_model($data);
 		if ($insert) {
@@ -233,6 +236,22 @@ class Home extends CI_Controller{
 	public function add_emp(){
 		$company = $this->uri->segment(3);
 		$this->load->view('employee',['company'=>$company]);
+	}
+
+	public function company_dashbord(){
+		$data = $this->Home_model->getcompany($this->session->userdata('username'));
+		$walkon = $this->Home_model->walkon_count();
+		$stepon = $this->Home_model->stepon_count();
+		$pedalon = $this->Home_model->pedalon_count();
+		$this->load->view('welcome_message',['data'=>$data,'walkon'=>$walkon,'stepon'=>$stepon,'pedalon'=>$pedalon]);
+	}
+
+	public function employee_dashboard(){
+		$data = $this->Home_model->getemp($this->session->userdata('username'));
+		$walkon = $this->Home_model->walkon_count();
+		$stepon = $this->Home_model->stepon_count();
+		$pedalon = $this->Home_model->pedalon_count();
+		$this->load->view('welcome_message',['data'=>$data,'walkon'=>$walkon,'stepon'=>$stepon,'pedalon'=>$pedalon]);
 	}
 }
 
