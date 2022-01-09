@@ -13,7 +13,7 @@
 							<div class="card-body align-center">
 								<div class="employee-office-table">
 									<div class="table-responsive">
-										<table class="table custom-table table-hover">
+										<table id="example" class="table custom-table table-hover">
 											<thead>
 												<tr>
 													<th>Challenge</th>
