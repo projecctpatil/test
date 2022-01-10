@@ -31,34 +31,15 @@
 	<section>
 		<div class="container">
 			<div class="user signinBx">
-				<div class="imgBx">
-					<img src="<?php echo base_url('assets/img/cycling1.png'); ?>" alt="" />
-				</div>
 				<div class="formBx text-center justify-content-center">
 					<form action="<?php echo base_url('login'); ?>" method="post" onsubmit="return;">
-						<h2 class="alert alert-success" ><?php echo $this->session->flashdata('login'); ?></h2>
-						<h2>Sign In</h2>
+						<h2>Employee Sign Up</h2>
 						<input type="text" name="email" placeholder="Email ID/User ID" />
-						<input type="password" name="password" placeholder="Password" />
-						<input type="submit" name="" value="Login" />
-						<p class="signup">Didn't Signed up yet ?
-							<a href="#" onclick="toggleForm();">Signup.</a>
-						</p>
-					</form>
-				</div>
-			</div>
-			<div class="user signupBx">
-				<div class="formBx text-center justify-content-center">
-					<form action="<?php echo base_url('login'); ?>" method="post" onsubmit="return;">
-						<h2>Company Sign Up</h2>
-						<input type="text" name="email" placeholder="Company Email ID" />
+						<input type="text" name="tel" placeholder="Phone number" />
 						<input type="password" name="password" placeholder="Password" />
 						<input type="password" name="confirm_password" placeholder="Confirm Password" />
 						<input type="submit" name="" value="Signup" />
 						<p class="signup">Signed up already?
-							<a href="#" onclick="toggleForm();">Login.</a>
-						</p>
-						<p class="signup">Sign up as an Employee?
 							<a href="#" onclick="toggleForm();">Login.</a>
 						</p>
 					</form>
@@ -95,14 +76,7 @@
 
 <script src="<?php echo base_url('assets/js/script.js'); ?>"></script>
 	
-	
-	<script>
-		const toggleForm = () => {
-		const container = document.querySelector('.container');
-		container.classList.toggle('active');
-		};
-	</script>
-	
+
 	
 </body>
 </html>
