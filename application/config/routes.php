@@ -49,14 +49,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'welcome/test';
 $route['Home'] = 'Home';
-$route['logout'] = 'Home/logout';
-$route['register'] = 'Home/register';
-$route['login'] = 'Home/login';
+$route['logout'] = 'welcome/logout';
+$route['company_login'] = 'welcome/company_login';
+$route['login'] = 'welcome/login';
+$route['employee_login'] = 'welcome/employee_login';
 $route['create_challenge'] = 'Home/create_challenge';
 $route['company'] = 'Home/company';
-$route['employee'] = 'Home/employee';
+$route['add_company'] = 'Home/add_company';
+$route['company_list'] = 'Home/company_list';
+$route['add_emp/(:any)/(:any)'] = 'Home/add_emp/$1/$2';
+$route['test'] = 'welcome/test';
+$route['add_employee'] = 'Home/add_employee';
+
+$route['company_login_d'] = 'welcome/company_login_d';
+$route['company_dashbord'] = 'Home/company_dashbord';
+
+$route['emp_list'] = 'Home/emp_list';
+$route['employee_dashboard'] = 'Home/employee_dashboard';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
