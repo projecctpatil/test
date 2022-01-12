@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="<?php echo base_url('assets/css/lnr-icon.css'); ?>">
 
-<link rel="stylesheet" href="<?php echo base_url('assets/css/all.min.css'); ?>">
+<link rel="stylesheet" type='text/css' media='all'  href="<?php echo base_url('assets/css/all.min.css'); ?>">
 <link rel="stylesheet" href="<?php echo base_url('assets/css/animate.min.css'); ?>">
 
 <link rel="stylesheet" href="<?php echo base_url('assets/css/dataTables.bootstrap4.min.css'); ?>">
@@ -53,7 +53,7 @@
 				<?php if (isset($data)) { ?>
 				<ul class="nav navbar-nav">
 					<li class="<?php echo ($this->uri->segment('1') == '') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>index.php"><span class="lnr lnr-home pr-0 pb-lg-2"></span><span class=""> Dashboard</span></a></li>
-					<li class="<?php echo ($this->uri->segment('1') == 'emp_list') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>emp_list"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Employe List </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'emp_list') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>emp_list"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Employee List </span></a></li>
 					<li class="<?php echo ($this->uri->segment('1') == 'Logout') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>logout"><span class="lnr lnr-exit-up pr-0 pb-lg-2"></span><span class=""> Logout </span></a></li>
 				</ul>
 				<?php } else { ?>

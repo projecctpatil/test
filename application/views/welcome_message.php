@@ -10,23 +10,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12  col-md-12">
-				<!-- <div class="quicklink-sidebar-menu ctm-border-radius shadow-sm bg-white card grow">
-					<div class="card-body">
-						<div class="d-flex justify-content-between align-items-center breaking-news bg-white">
-							<div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
-								<span class="d-flex align-items-center">&nbsp;SAMSUNG</span>
-							</div>
-							<marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
-								<a href="#">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
-								<span class="dot"></span> 
-								<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </a> 
-								<span class="dot"></span> 
-								<a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse </a> 
-							</marquee>
-						</div>
-					</div>
-				</div> -->
-
 				<div class="row">
 					<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="card dash-widget ctm-border-radius shadow-sm grow">
@@ -86,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<?php } else { ?>	
 				<div class="row">
-					<div class="col-md-6 d-flex">
+					<div class="col-lg-12">
 						<div class="card ctm-border-radius shadow-sm flex-fill grow">
 							<div class="card-header">
 								<h4 class="card-title mb-0">Live Challenges</h4>
@@ -98,9 +81,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="card-body">
 								<div class="Content">
 									<ul class="List">
-										<li class="List-item">
+										<li class="List-item shadow-sm">
 											<div class="list-item-title">
-												<span>WalkOn</span>
+												<span><strong>WalkOn</strong></span>
 												<button class="btn" data-toggle="modal" data-target="#exampleModalCenterwalkon">
 													<i class="fas fa-plus"></i>
 												</button>	
@@ -118,9 +101,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</div>
 										</li>
 								  
-										<li class="List-item">
+										<li class="List-item shadow-sm">
 											<div class="list-item-title">
-												<span>SprintOn</span>
+												<span><strong>SprintOn</strong></span>
 												<button class="btn" data-toggle="modal" data-target="#exampleModalCentersprinton"><i class="fas fa-plus"></i></button>
 											</div>
 											<div class="circle_percent" data-percent="<?php echo $stepon; ?>">
@@ -135,9 +118,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</div>
 										</li>
 									  
-										<li class="List-item">
+										<li class="List-item shadow-sm">
 											<div class="list-item-title">
-												<span>PedalOn</span>
+												<span><strong>PedalOn</strong></span>
 												<button class="btn" data-toggle="modal" data-target="#exampleModalCenterpedalon"><i class="fas fa-plus"></i></button>
 											</div>
 											<div class="circle_percent" data-percent="<?php echo $pedalon; ?>">
@@ -158,7 +141,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 d-flex">
+					
+					
+				</div>
+
+				<div class="row">
+				
+					<div class="col-lg-6">
 						<div class="card ctm-border-radius shadow-sm flex-fill grow">
 							<div class="card-header">
 								<h4 class="card-title mb-0">Reports</h4>
@@ -169,19 +158,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<li data-target="#carouselreports" data-slide-to="0" class="active"></li>
 										<li data-target="#carouselreports" data-slide-to="1"></li>
 										<li data-target="#carouselreports" data-slide-to="2"></li>
+										<li data-target="#carouselreports" data-slide-to="3"></li>
 									</ol>
 									<div class="carousel-inner">
 										<div class="carousel-item active text-center">
-											<h5>HealthOMeter</h5>
+											<h5>Employee Participation</h5>
 											<canvas id="Chart1"></canvas>
 										</div>
 										<div class="carousel-item text-center">
-											<h5>Participation</h5>
+											<h5>Monthly redeem</h5>
 										    <canvas id="Chart2"></canvas>
 										</div>
 										<div class="carousel-item text-center">
-											<h5>HealthOMeter</h5>
+											<h5>EHI</h5>
 											<canvas id="Chart3"></canvas>
+										</div>
+										<div class="carousel-item text-center">
+											<h5>Health Meter</h5>
+											<canvas id="Chart4"></canvas>
 										</div>
 									</div>
 									<a class="carousel-control-prev" href="#carouselreports" role="button" data-slide="prev">
@@ -196,9 +190,118 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="row">
+					
+					<div class="col-lg-6">
+						<div class="card ctm-border-radius shadow-sm grow">
+							<div class="card-header">
+								<h4 class="card-title mb-0 d-inline-block">Generic Award</h4>
+								<a href="javascript:void(0)" class="d-inline-block float-right text-primary"><i class="lnr lnr-sync"></i></a>
+							</div>
+							<div class="card-body recent-activ">
+								<ul class="nav nav-tabs tabs-marker tabs-dark bg-dark" id="myTab" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link active" id="recent" data-toggle="tab" href="#recent-tab" role="tab" aria-controls="recent" aria-selected="true">Recent <span class="marker"></span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" id="older" data-toggle="tab" href="#older-tab" role="tab" aria-controls="older" aria-selected="false">Older<span class="marker"></span></a>
+									</li>
+								</ul>
+								<div class="tab-content challenge-tab-content" id="myTabContent">
+									<div class="tab-pane fade show award-tab-content active" id="recent-tab" role="tabpanel" aria-labelledby="recent-tab">
+										<table class="table text-center">
+											<tbody>
+												<tr>
+												  <td>
+													<div class="avatar avatar-blue mr-3">
+														<img src="assets/img/avatar_placeholder_2_purple.png">
+													</div>
+												  </td>
+												  <td>Monthly Award</td>
+												  <td>Employee A</td>
+												  <td>1000 Pts</td>
+												</tr>
+												<tr>
+												  <td>
+													<div class="avatar avatar-blue mr-3">
+														<img src="assets/img/avatar_placeholder_2_purple.png">
+													</div>
+												  </td>
+												  <td>Monthly Award</td>
+												  <td><button class="btn" data-toggle="modal" data-target="#assignaward">Assign</button></td>
+												  <td>2500 Pts</td>
+												</tr>
+												<tr>
+												  <td>
+													<div class="avatar avatar-blue mr-3">
+														<img src="assets/img/avatar_placeholder_2_purple.png">
+													</div>
+												  </td>
+												  <td>Monthly Award</td>
+												  <td>Employee C</td>
+												  <td>10000 Pts</td>
+												</tr>
+												<tr>
+												  <td>
+													<div class="avatar avatar-blue mr-3">
+														<img src="assets/img/avatar_placeholder_2_purple.png">
+													</div>
+												  </td>
+												  <td>Monthly Award</td>
+												  <td>Employee D</td>
+												  <td>10000 Pts</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="tab-pane fade" id="older-tab" role="tabpanel" aria-labelledby="older-tab">
+										<div class="empty-reward">
+											<p>Empty <i class="fas fa-frown"></i></p>
+											<p>Reward your Employee!</p>
+											<button class="btn" data-toggle="modal" data-target="#assignaward">Reward</button>
+										</div>
+										<!--<table class="table text-center">
+											<tbody>
+												<tr>
+												  <td>
+													<div class="avatar avatar-blue mr-3">
+														<img src="assets/img/avatar_placeholder_2_purple.png">
+													</div>
+												  </td>
+												  <td>Monthly Award</td>
+												  <td>Employee D</td>
+												  <td>10000 Pts</td>
+												</tr>
+												<tr>
+												  <td>
+													<div class="avatar avatar-blue mr-3">
+														<img src="assets/img/avatar_placeholder_2_purple.png">
+													</div>
+												  </td>
+												  <td>Monthly Award</td>
+												  <td>Employee E</td>
+												  <td>10000 Pts</td>
+												</tr>
+												<tr>
+												  <td>
+													<div class="avatar avatar-blue mr-3">
+														<img src="assets/img/avatar_placeholder_2_purple.png">
+													</div>
+												  </td>
+												  <td>Monthly Award</td>
+												  <td>Employee F</td>
+												  <td>10000 Pts</td>
+												</tr>
+											</tbody>
+										</table>-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					
 					<div class="col-lg-6">
 						<div class="card ctm-border-radius shadow-sm grow">
 							<div class="card-header">
@@ -601,7 +704,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenterwalkon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade create-challenge" id="exampleModalCenterwalkon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -618,33 +721,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form id="msform" action="<?php echo base_url(); ?>create_challenge" method="POST">
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active" id="account"><strong>Define Event</strong></li>
-                        <li id="personal"><strong>Create your Badge</strong></li>
-                        <!-- <li id="payment"><strong>Summary</strong></li> -->
-						<li id="confirm"><strong>Finish</strong></li>
+                        <li class="active" id="event"><strong>Define Event</strong></li>
+                        <li id="createbadge"><strong>Create your Badge</strong></li>
                     </ul>
                     <fieldset>
                         <div class="form-card">
                             <div class="row">
                                 <div class="col">
-                                    <h2 class="steps">Step 1 - 3</h2>
+                                    <h2 class="steps">Step 1 - 2</h2>
                                 </div>
                             </div> 
-                            <input type="hidden" name="popular" value="walkon">
+                            <input class="popupinput" type="hidden" name="popular" value="walkon">
 							<label class="fieldlabels">Name: *</label> 
-							<input type="text" name="name" placeholder="Name" /> 
+							<input class="popupinput" type="text" name="name" placeholder="Name" /> 
 							<label class="fieldlabels">Start Date: *</label> 
-							<input type="date" name="start_time" placeholder="Start Date" /> 
+							<input class="popupinput" type="date" name="start_time" placeholder="Start Date" /> 
 							<label class="fieldlabels">End Date: *</label> 
-							<input type="date" name="end_time" placeholder="End Date" /> 
+							<input class="popupinput" type="date" name="end_time" placeholder="End Date" /> 
 							<label class="fieldlabels">Number of Steps: *</label> 
-							<input type="number" name="step_count" placeholder="No. of Steps" /> 
+							<input class="popupinput" type="number" name="step_count" placeholder="No. of Steps" /> 
 							<label class="fieldlabels">Message: </label> 
 							<textarea id="msg" rows="3" name="description"></textarea>
 							<label class="fieldlabels">Points: *</label> 
-							<input type="number" name="points" placeholder="Points" />
+							<input class="popupinput" type="number" name="points" placeholder="Points" />
 							<label class="fieldlabels">Duration: *</label> 
-							<input type="number" name="duration" placeholder="Duration" />
+							<input class="popupinput" type="number" name="duration" placeholder="Duration" />
                         </div> 
 						<input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
@@ -652,7 +753,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-card">
                             <div class="row">
                                 <div class="col">
-                                    <h2 class="steps">Step 2 - 3</h2>
+                                    <h2 class="steps">Step 2 - 2</h2>
                                 </div>
                             </div> 
 							<input type="radio" id="name" name="b_name" value="30">
@@ -662,19 +763,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<br>
                         </div> 
 						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
-                            <div class="row justify-content-center">
-                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
-                            </div> <br><br>
-                            <div class="row justify-content-center">
-                                <div class="col-7 text-center">
-                                    <h5 class="purple-text text-center">You Have Successfully created a challenge!</h5>
-                                </div>
-                            </div>
-                        </div>
                     </fieldset>
                 </form>
             </div>
@@ -687,7 +775,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 
-<div class="modal fade" id="exampleModalCentersprinton" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade create-challenge" id="exampleModalCentersprinton" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -704,35 +792,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form id="msform" action="<?php echo base_url(); ?>create_challenge" method="POST">
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active" id="account"><strong>Define Event</strong></li>
-                        <li id="personal"><strong>Create your Badge</strong></li>
-                        <!-- <li id="payment"><strong>Summary</strong></li> -->
-						<li id="confirm"><strong>Finish</strong></li>
+                        <li class="active" id="event"><strong>Define Event</strong></li>
+                        <li id="createbadge"><strong>Create your Badge</strong></li>
                     </ul>
                     <fieldset>
                         <div class="form-card">
                             <div class="row">
                                 <div class="col">
-                                    <h2 class="steps">Step 1 - 3</h2>
+                                    <h2 class="steps">Step 1 - 2</h2>
                                 </div>
                             </div>
-                            <input type="hidden" name="popular" value="stepon">
+                            <input class="popupinput" type="hidden" name="popular" value="stepon">
                             <label class="fieldlabels">Name: *</label> 
-							<input type="text" name="name" placeholder="Name" /> 
+							<input class="popupinput" type="text" name="name" placeholder="Name" /> 
 							<label class="fieldlabels">Start Date: *</label> 
-							<input type="date" name="start_time" placeholder="Start Date" /> 
+							<input class="popupinput" type="date" name="start_time" placeholder="Start Date" /> 
 							<label class="fieldlabels">End Date: *</label> 
-							<input type="date" name="end_time" placeholder="End Date" /> 
+							<input class="popupinput" type="date" name="end_time" placeholder="End Date" /> 
 							<label class="fieldlabels">distance: *</label> 
-							<input type="number" name="distance" placeholder="distance" /> 
+							<input class="popupinput" type="number" name="distance" placeholder="distance" /> 
 							<label class="fieldlabels">speed: *</label> 
-							<input type="number" name="speed" placeholder="speed" /> 
+							<input class="popupinput" type="number" name="speed" placeholder="speed" /> 
 							<label class="fieldlabels">Message: </label> 
 							<textarea id="msg" rows="3" name="description"></textarea>
 							<label class="fieldlabels">Points: *</label> 
-							<input type="number" name="points" placeholder="Points" />
+							<input class="popupinput" type="number" name="points" placeholder="Points" />
 							<label class="fieldlabels">Duration: *</label> 
-							<input type="number" name="duration" placeholder="Duration" />
+							<input class="popupinput" type="number" name="duration" placeholder="Duration" />
                         </div> 
 						<input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
@@ -740,7 +826,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-card">
                             <div class="row">
                                 <div class="col">
-                                    <h2 class="steps">Step 2 - 3</h2>
+                                    <h2 class="steps">Step 2 - 2</h2>
                                 </div>
                             </div> 
 							<input type="radio" id="name" name="b_name" value="30">
@@ -750,19 +836,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<br>
                         </div> 
 						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
-                            <div class="row justify-content-center">
-                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
-                            </div> <br><br>
-                            <div class="row justify-content-center">
-                                <div class="col-7 text-center">
-                                    <h5 class="purple-text text-center">You Have Successfully created a challenge!</h5>
-                                </div>
-                            </div>
-                        </div>
                     </fieldset>
                 </form>
             </div>
@@ -774,7 +847,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 </div>
 
-<div class="modal fade" id="exampleModalCenterpedalon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade create-challenge" id="exampleModalCenterpedalon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -791,35 +864,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form id="msform" action="<?php echo base_url(); ?>create_challenge" method="POST">
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active" id="account"><strong>Define Event</strong></li>
-                        <li id="personal"><strong>Create your Badge</strong></li>
-                        <!-- <li id="payment"><strong>Summary</strong></li> -->
-						<li id="confirm"><strong>Finish</strong></li>
+                        <li class="active" id="event"><strong>Define Event</strong></li>
+                        <li id="createbadge"><strong>Create your Badge</strong></li>
                     </ul>
                     <fieldset>
                         <div class="form-card">
                             <div class="row">
                                 <div class="col">
-                                    <h2 class="steps">Step 1 - 3</h2>
+                                    <h2 class="steps">Step 1 - 2</h2>
                                 </div>
                             </div>
-                            <input type="hidden" name="popular" value="pedalon">
+                            <input class="popupinput" type="hidden" name="popular" value="pedalon">
                             <label class="fieldlabels">Name: *</label> 
-							<input type="text" name="name" placeholder="Name" /> 
+							<input class="popupinput" type="text" name="name" placeholder="Name" /> 
 							<label class="fieldlabels">Start Date: *</label> 
-							<input type="date" name="start_time" placeholder="Start Date" /> 
+							<input class="popupinput" type="date" name="start_time" placeholder="Start Date" /> 
 							<label class="fieldlabels">End Date: *</label> 
-							<input type="date" name="end_time" placeholder="End Date" /> 
+							<input class="popupinput" type="date" name="end_time" placeholder="End Date" /> 
 							<label class="fieldlabels">Duration: *</label> 
-							<input type="number" name="duration" placeholder="Duration" />
+							<input class="popupinput" type="number" name="duration" placeholder="Duration" />
 							<label class="fieldlabels">Speed: *</label> 
-							<input type="number" name="speed" placeholder="Speed" /> 
+							<input class="popupinput" type="number" name="speed" placeholder="Speed" /> 
 							<label class="fieldlabels">Message: </label> 
 							<textarea id="msg" rows="3" name="description"></textarea>
 							<label class="fieldlabels">Points: *</label> 
-							<input type="number" name="points" placeholder="Points" />
+							<input class="popupinput" type="number" name="points" placeholder="Points" />
 							<label class="fieldlabels">Duration: *</label> 
-							<input type="number" name="duration" placeholder="Duration" />
+							<input class="popupinput" type="number" name="duration" placeholder="Duration" />
                         </div> 
 						<input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
@@ -827,7 +898,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-card">
                             <div class="row">
                                 <div class="col">
-                                    <h2 class="steps">Step 2 - 3</h2>
+                                    <h2 class="steps">Step 2 - 2</h2>
                                 </div>
                             </div> 
 							<input type="radio" id="name" name="b_name" value="30">
@@ -836,21 +907,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<label class="fieldlabels fieldlabelradio" for="power">Power</label>
 							<br>
                         </div> 
-						<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+						<input type="submit" name="next" class="next action-button" value="Submit" /> 
+						<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                     </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
-                            <div class="row justify-content-center">
-                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
-                            </div> <br><br>
-                            <div class="row justify-content-center">
-                                <div class="col-7 text-center">
-                                    <h5 class="purple-text text-center">You Have Successfully created a challenge!</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
+                   
                 </form>
             </div>
         </div>
@@ -861,6 +921,120 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 </div>
 
+<div class="modal fade" id="assignaward" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<!-- multistep form -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg12 col-xl-12 text-center p-0 mb-2">
+            <div class="card-main-body px-5 pt-4 pb-0 mb-3">
+                <h2 id="heading">Generic Award</h2>
+                <form id="msform" action="<?php echo base_url(); ?>create_challenge" method="POST">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="detail"><strong>Details</strong></li>
+                        <li id="badge"><strong>Badge</strong></li>
+                        <!-- <li id="payment"><strong>Summary</strong></li> -->
+						<li id="summary"><strong>Summary</strong></li>
+                    </ul>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 1 - 3</h2>
+                                </div>
+                            </div>
+                            <input class="popupinput" type="hidden" name="popular" value="pedalon">
+                            <label class="fieldlabels">Award Name: *</label> 
+							<input class="popupinput" type="text" name="name" placeholder="Award Name" /> 
+							<label class="fieldlabels">Description: *</label> 
+							<textarea id="msg" rows="3" name="description"></textarea>
+							<label class="fieldlabels">Assign: *</label> 
+							  <select name="cars" id="cars">
+								<option>Select Employee</option>
+								<option value="Employee 1">Employee 1</option>
+								<option value="Employee 2">Employee 2</option>
+								<option value="Employee 3">Employee 3</option>
+								<option value="Employee 4">Employee 4</option>
+							  </select>
+							<label class="fieldlabels">Points: *</label> 
+							<input class="popupinput" type="number" name="duration" placeholder="Duration" />
+							<label class="fieldlabels">Department: *</label> 
+							<input class="popupinput" type="text" name="speed" placeholder="Department" /> 
+							<input type="checkbox" id="check1" name="check1">
+							<label for="check1"> Send instant notification </label>
+                        </div> 
+						<input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 2 - 3</h2>
+                                </div>
+                            </div> 
+							<label class="radio-img">
+							<input type="radio" name="layout" />
+							<div class="badge-image" style="background-image: url(https://image.freepik.com/free-vector/realistic-glass-trophy-awards-soccer_107791-2710.jpg)"></div>
+						  </label>
+						  
+						  <label class="radio-img">
+							<input type="radio" name="layout" />
+							<div class="badge-image" style="background-image: url(https://image.freepik.com/free-vector/realistic-vector-square-podium-with-prize-top_134830-668.jpg)"></div>
+						  </label>
+						  
+						  <label class="radio-img">
+							<input type="radio" name="layout" />
+							<div class="badge-image" style="background-image: url(https://image.freepik.com/free-vector/trophy-award-laurel-wreath-composition-with-realistic-image-golden-cup-decorated-with-garland-with-reflection_1284-32301.jpg)"></div>
+						  </label>
+
+						  <label class="radio-img">
+							<input type="radio" name="layout" />
+							<div class="badge-image" style="background-image: url(https://image.freepik.com/free-vector/glass-trophy-realistic-concept-with-champion-leadership-symbols_1284-31640.jpg)"></div>
+						  </label>
+
+						  <label class="radio-img">
+							<input type="radio" name="layout" />
+							<div class="badge-image" style="background-image: url(https://img.freepik.com/free-vector/realistic-golden-championship-trophy-cup_1284-38814.jpg?size=338&ext=jpg)"></div>
+						  </label>
+							<br>
+							<input type="checkbox" id="check2" name="check2">
+							<label for="check2"> Public </label>
+                        </div> 
+						<input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+					<fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="steps">Step 3 - 3</h2>
+                                </div>
+                            </div> 
+							<p>Monthly Award To Employee Name/ Not assigned </p>
+							<p>Award details: Award description text</p>
+							<p>Points: 5000</p>
+							<span>Badge:</span>
+							<div class="badge-image">
+								<img src="https://image.freepik.com/free-vector/trophy-award-laurel-wreath-composition-with-realistic-image-golden-cup-decorated-with-garland-with-reflection_1284-32301.jpg">
+							</div>
+                        </div> 
+						<input type="submit" name="next" class="next action-button" value="Create" /> 
+						 <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+		
+      </div>
+    </div>
+  </div>
 </div>
 
 
