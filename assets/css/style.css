@@ -526,9 +526,9 @@ nav ul li.hover a {
 .ctm-border-full {
     border: 1px solid #ededed;
 }
-img:hover {
+/*img:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+}*/
 a .avatar:hover > img {
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
@@ -1603,6 +1603,17 @@ textarea.form-control {
   display:inline-block;
   margin:0px 90px;
 }
+.employee-live-challenge .circle_percent {
+  font-size:120px;
+  width:1em;
+  height:1em;
+  position: relative;
+  background: #eee;
+  border-radius:50%;
+  overflow:hidden;
+  display:inline-block;
+  margin:0px;
+}
 .circle_inner {
   position: absolute;
   left: 0;
@@ -1657,6 +1668,142 @@ textarea.form-control {
   display:grid;
   width: 100%;
 }
+.employee-live-challenge .Content{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.joinchallenge-caption{
+    padding: 20px 23px 25px 0px;
+}
+.emp-join-challenge p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: system-ui;
+        padding: 5px 0px;
+}
+.first-fieldset p{
+    text-align: left;
+}
+.submit-fit-id{
+   width: 100px;
+    background: #1C4E80;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+}
+
+
+@-webkit-keyframes loader {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 10%;
+  }
+  25% {
+    width: 24%;
+  }
+  43% {
+    width: 41%;
+  }
+  56% {
+    width: 50%;
+  }
+  66% {
+    width: 52%;
+  }
+  71% {
+    width: 60%;
+  }
+  75% {
+    width: 76%;
+  }
+  94% {
+    width: 86%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 10%;
+  }
+  25% {
+    width: 24%;
+  }
+  43% {
+    width: 41%;
+  }
+  56% {
+    width: 50%;
+  }
+  66% {
+    width: 52%;
+  }
+  71% {
+    width: 60%;
+  }
+  75% {
+    width: 76%;
+  }
+  94% {
+    width: 86%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.connect-progress-bar {
+  border-radius: 60px;
+  overflow: hidden;
+  width: 100%;
+}
+.connect-progress-bar span {
+  display: block;
+}
+
+.connect-bar {
+  background: rgba(0, 0, 0, 0.075);
+}
+
+.connect-progress {
+  -webkit-animation: loader 8s ease infinite;
+          animation: loader 8s ease infinite;
+  background: #75b800;
+  color: #fff;
+  padding: 5px;
+  width: 0;
+}
+
+.connect-progress-bar {
+  left: 50%;
+  max-width: 70%;
+  position: relative;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  margin-bottom: 20px;
+}
+.connect-to-app{
+    display: block;
+}
 
 .List {
   display: flex;
@@ -1669,6 +1816,11 @@ textarea.form-control {
   width: 100%;
     margin: 0px 10px;
     border: 1px solid #cccccc38;
+    border-radius: 10px;
+    padding: 10px;
+}
+.employee-live-challenge .List-item {
+    border: 1px solid transparent;
     border-radius: 10px;
     padding: 10px;
 }
@@ -2150,6 +2302,9 @@ section .container.active .signinBx .imgBx {
     border: 1px solid #677eff;
     background: #677eff;
     padding: 0px 10px;
+    color: #fff;
+}
+.progress-item button:hover{
     color: #fff;
 }
 .wrapper {
@@ -2758,9 +2913,24 @@ body.msb-x .msb {
 #msform {
     text-align: center;
     position: relative;
-    margin-top: 20px
+    /*margin-top: 20px*/
 }
-
+#joinchallenge .modal-body{
+    padding: 0;
+}
+#joinchallenge fieldset{
+    padding: 35px;
+    border-radius: 0 !important;
+}
+#joinchallenge fieldset:nth-child(3){
+    background: #5d696f;
+}
+#joinchallenge fieldset:nth-child(3) p{
+    color: #fff;
+}
+#joinchallenge fieldset:nth-child(3) img{
+    margin-bottom: 20px;
+}
 #msform fieldset {
     background: white;
     border: 0 none;

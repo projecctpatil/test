@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<div class="row">
 					<div class="col-md-6 d-flex">
-						<div class="card ctm-border-radius shadow-sm flex-fill grow">
+						<div class="card ctm-border-radius shadow-sm flex-fill grow employee-live-challenge">
 							<div class="card-header">
 								<h4 class="card-title mb-0">Your Live Challenges</h4>
 							</div>
@@ -95,7 +95,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							
 							<div class="card-body">
 								<div class="Content">
-									<ul class="List">
+									<div class="emp-join-challenge">
+										<div class="row">
+											<div class="col-6">
+												<img src="https://t3.ftcdn.net/jpg/04/59/45/34/240_F_459453406_kbQZI2lPJmqaNVdexiRI0yrOEeQydJTH.jpg">
+											</div>
+											<div class="col-6 joinchallenge-caption">
+												<p>Looks like you have not tried our challenges yet!!</p>
+												<p style="color: chocolate;">Join Challenges now to earn cool rewards!! </p>
+											</div>
+										</div>
+									</div>
+									<!--<ul class="List">
 										<li class="List-item">
 											<div class="list-item-title">
 												<span>WalkOn</span>
@@ -103,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<i class="fas fa-plus"></i>
 												</button>	
 											</div>
-											<div class="circle_percent" data-percent="<?php echo $walkon; ?>">
+											<div class="circle_percent" data-percent="<?php //echo $walkon; ?>">
 												  <div class="circle_inner">
 													  <div class="round_per">
 													</div>
@@ -121,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<span>SprintOn</span>
 												<button class="btn" data-toggle="modal" data-target="#exampleModalCentersprinton"><i class="fas fa-plus"></i></button>
 											</div>
-											<div class="circle_percent" data-percent="<?php echo $stepon; ?>">
+											<div class="circle_percent" data-percent="<?php //echo $stepon; ?>">
 												<div class="circle_inner">
 													<div class="round_per"></div>
 												</div>
@@ -138,7 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<span>PedalOn</span>
 												<button class="btn" data-toggle="modal" data-target="#exampleModalCenterpedalon"><i class="fas fa-plus"></i></button>
 											</div>
-											<div class="circle_percent" data-percent="<?php echo $pedalon; ?>">
+											<div class="circle_percent" data-percent="<?php //echo $pedalon; ?>">
 												<div class="circle_inner">
 													<div class="round_per"></div>
 												</div>
@@ -150,7 +161,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</div>
 										</li>
 									
-									</ul>
+									</ul>-->
 								</div>
 								<!--<canvas id="pieChart"></canvas>-->
 							</div>
@@ -213,7 +224,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										    	<span class="perc"></span>
 										    </div>
 										</div>
-										<button class="btn">Join</button>
+										<button class="btn" data-toggle="modal" data-target="#joinchallenge">
+											Join
+										</button>
 									</div>
 
 									<label>20K Walkamaniac</label>
@@ -223,7 +236,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										    	<span class="perc"></span>
 										    </div>
 										</div>
-										<button class="btn">Join</button>
+										<button class="btn" data-toggle="modal" data-target="#joinchallenge">
+											Join
+										</button>
 									</div>
 
 									<label>20K Walkamaniac</label>
@@ -233,7 +248,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										    	<span class="perc"></span>
 										    </div>
 										</div>
-										<button class="btn">Join</button>
+										<button class="btn" data-toggle="modal" data-target="#joinchallenge">
+											Join
+										</button>
 									</div>
 
 
@@ -244,7 +261,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										    	<span class="perc"></span>      
 										    </div>
 										</div>
-										<button class="btn">Join</button>
+										<button class="btn" data-toggle="modal" data-target="#joinchallenge">
+											Join
+										</button>
 									</div>
 
 								</div>
@@ -673,6 +692,71 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 </div>
+
+
+
+
+
+
+<!-- Modal -->
+
+<div class="modal fade create-challenge" id="joinchallenge" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      
+		<!-- multistep form -->
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+                <form id="msform" action="" method="POST">
+                    <fieldset class="first-fieldset">
+                    	<h4 id="heading">Please confirm your Google Fit ID</h4>
+                        <div class="form-card">
+							<input class="popupinput" type="text" name="name" placeholder="Email ID" />  
+                        </div> 
+                        <input type="button" name="submit" class="submit-fit-id" value="Submit" />
+                        <p>Disclaimer:<br>
+When processing personal data, we attach great importance to protecting your private sphere and ensuring that your data are secure. We access your fitness data but we don’t store this data only for short duration till the challenges are live.  After challenges are over we delete your personal information. We comply all security compliance requirements and easy option to delete your all personal information by just one button click. As a matter of principle, we don’t pass your personal data to any third parties. We take your fitness data to evaluate fitness challenges which you are part of</p>
+						<input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                    	<div class="connect-to-app">
+	                        <div class="connect-progress-bar">
+							  <span class="connect-bar">
+							    <span class="connect-progress"></span>
+							  </span>
+							</div>
+							<p>Please wait till we connect with your fitness app.</p>
+						</div>
+						<input type="button" name="next" class="next action-button" value="Next" />
+						<!--<input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />-->
+                    </fieldset>
+                    <fieldset>
+                    	<img src="https://media1.giphy.com/media/vuOw3fiAdjVNYMBjoh/giphy.gif" width="250" />
+                    	<p>Awesome, you are ready!!</p>
+                    	<p>Let's go!</p>
+						<input type="submit" name="next" class="next action-button" value="Continue" /> 
+                    </fieldset>
+                </form>
+        </div>
+    </div>
+		
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <?php include ('footer.php'); ?>
