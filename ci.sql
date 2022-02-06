@@ -61,6 +61,7 @@ CREATE TABLE `company_detele` (
   `country` char(50) DEFAULT NULL,
   `post_code` int(10) DEFAULT NULL,
   `c_date` char(20) DEFAULT NULL,
+  `username` char(20) DEFAULT NULL,
   `password` char(50) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
@@ -544,7 +545,7 @@ INSERT INTO `walkon` VALUES (1,'3','2021-11-12','2021-11-13','3','2','aa','aa'),
 /*!40000 ALTER TABLE `walkon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-alter company_detele add column username varchar(20);
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
