@@ -29,21 +29,26 @@ class Welcome extends CI_Controller {
 
 	public function login(){
 		$this->load->model('Home_model');
-		$result = $this->Home_model->checkLogin($this->input->post('email') , $this->input->post('password'));
-		if ($result) {
-			$this->session->set_userdata('username',$this->input->post('email'));
-			redirect('Home');
+		if($this->input->post('type') == 'employer'){
+			return self::company_login_d();
 		} else {
-			$this->session->set_flashdata('login','Please type right user id and password !');
-			redirect('logout');
+			return self::employee_login();
 		}
+		// $result = $this->Home_model->checkLogin($this->input->post('email') , $this->input->post('password'));
+		// if ($result) {
+		// 	$this->session->set_userdata('username',$this->input->post('email'));
+		// 	redirect('Home');
+		// } else {
+		// 	$this->session->set_flashdata('login','Please type right user id and password !');
+		// 	redirect('logout');
+		// }
 	}
 
 	public function employee_login(){
 		$this->load->model('Home_model');
-		$result = $this->Home_model->checkempLogin($this->input->post('u_name') , $this->input->post('password'));
+		$result = $this->Home_model->checkempLogin($this->input->post('email') , $this->input->post('password'));
 		if ($result) {
-			$this->session->set_userdata('username',$this->input->post('u_name'));
+			$this->session->set_userdata('username',$this->input->post('email'));
 			redirect('employee_dashboard');
 		} else {
 			$this->session->set_flashdata('login','Please type right user id and password !');
@@ -56,7 +61,7 @@ class Welcome extends CI_Controller {
 		$result = $this->Home_model->checkLogin($this->input->post('email') , $this->input->post('password'));
 		if ($result) {
 			$this->session->set_userdata('username',$this->input->post('email'));
-			redirect('Home');
+			redirect('company_dashbord');
 		} else {
 			$this->session->set_flashdata('login','Please type right user id and password !');
 			redirect('logout');

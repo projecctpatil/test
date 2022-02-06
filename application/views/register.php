@@ -43,7 +43,7 @@
 						<input type="text" name="email" placeholder="Email ID/User ID" />
 						<input type="password" name="password" placeholder="Password" />
 						<div class="formCheck">
-						    <input type="checkbox" class="form-check-input form-check-inline" id="exampleCheck1">
+						    <input type="checkbox" name="type" value="employer" class="form-check-input form-check-inline" id="exampleCheck1">
 						    <label class="form-check-label" for="exampleCheck1">Employer</label>
 						</div>
 						<input type="submit" name="" value="Login" />
