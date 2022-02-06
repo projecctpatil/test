@@ -183,6 +183,7 @@ class Home extends CI_Controller{
 					'company_name' => $this->input->post('company_name'),
 					'registered_company_number' => $this->input->post('registered_company_number'),
 					'Email' => $this->input->post('email'),
+					'username' => $this->input->post('company_name') . '_admin',
 					'contact_number' => $this->input->post('contact_number'),
 					'date' => $this->input->post('date'),
 					'vat_number' => $this->input->post('vat_number'),
@@ -196,6 +197,24 @@ class Home extends CI_Controller{
 				];
 		$insert = $this->Home_model->add_company_model($data);
 		if ($insert) {
+			$user_name = $this->input->post('company_name') . '_admin';
+			$this->load->config('email');
+	        $this->load->library('email');
+	        
+	        $from = $this->config->item('smtp_user');
+	        $to = $this->input->post('email');
+	        $subject = 'Your Account is created by admin';
+	        $message = 'User name : ' . $user_name . ' Password : ' . $password;
+
+	        $this->email->set_newline("\r\n");
+	        $this->email->from('projectpatilci@gmail.com');
+	        $this->email->to($this->input->post('email'));
+	        $this->email->subject($subject);
+	        $this->email->message($message);
+
+	        if (!$this->email->send()) {
+	        	show_error($this->email->print_debugger());
+	        }
 			$this->session->set_flashdata('add_company','Company add success fully !');
 			redirect('company');
 		} else {
