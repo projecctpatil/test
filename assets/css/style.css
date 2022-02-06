@@ -2288,6 +2288,19 @@ section .container.active .signinBx .imgBx {
 	position: absolute;
 }
 
+.formCheck{
+    display: flex;
+    justify-content: left;
+}
+.formCheck input {
+    width: 25px !important;
+}
+.formCheck .form-check-label{
+    line-height: 2;
+}
+
+
+
 
 
 /* Employee Dashboard */

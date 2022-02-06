@@ -36,10 +36,16 @@
 				</div>
 				<div class="formBx text-center justify-content-center">
 					<form action="<?php echo base_url('login'); ?>" method="post" onsubmit="return;">
-						<h2 class="alert alert-success" ><?php echo $this->session->flashdata('login'); ?></h2>
+						<?php if($this->session->flashdata('login')) {?>
+							<h2 class="alert alert-success"><?php echo $this->session->flashdata('login'); ?></h2>
+						<?php } ?>
 						<h2>Sign In</h2>
 						<input type="text" name="email" placeholder="Email ID/User ID" />
 						<input type="password" name="password" placeholder="Password" />
+						<div class="formCheck">
+						    <input type="checkbox" class="form-check-input form-check-inline" id="exampleCheck1">
+						    <label class="form-check-label" for="exampleCheck1">Employer</label>
+						</div>
 						<input type="submit" name="" value="Login" />
 						<p class="signup">Didn't Signed up yet ?
 							<a href="#" onclick="toggleForm();">Signup.</a>
@@ -50,17 +56,15 @@
 			<div class="user signupBx">
 				<div class="formBx text-center justify-content-center">
 					<form action="<?php echo base_url('login'); ?>" method="post" onsubmit="return;">
-						<h2>Company Sign Up</h2>
-						<input type="text" name="email" placeholder="Company Email ID" />
-						<input type="password" name="password" placeholder="Password" />
-						<input type="password" name="confirm_password" placeholder="Confirm Password" />
-						<input type="submit" name="" value="Signup" />
+						<h2>Sign Up</h2>
+						<input type="text" name="googlefitid" placeholder="Google Fit ID" />
+						<input type="submit" name="submit" value="Connect" />
 						<p class="signup">Signed up already?
 							<a href="#" onclick="toggleForm();">Login.</a>
 						</p>
-						<p class="signup">Sign up as an Employee?
+						<!--<p class="signup">Sign up as an Employee?
 							<a href="#" onclick="toggleForm();">Login.</a>
-						</p>
+						</p>-->
 					</form>
 				</div>
 				<div class="imgBx">
