@@ -42,14 +42,21 @@
 						<h2>Sign In</h2>
 						<input type="text" name="email" placeholder="Email ID/User ID" />
 						<input type="password" name="password" placeholder="Password" />
-						<div class="formCheck">
+						<div class="checkbox text-left switcher">
+					      <label for="test">
+					        <input type="checkbox" id="test" value="">
+					        <span><small></small></span>
+					        <small>Employee</small>
+					      </label>
+					    </div>
+						<!-- <div class="formCheck">
 						    <input type="checkbox" class="form-check-input form-check-inline" id="exampleCheck1">
 						    <label class="form-check-label" for="exampleCheck1">Employer</label>
-						</div>
+						</div> -->
 						<input type="submit" name="" value="Login" />
-						<p class="signup">Didn't Signed up yet ?
+						<!-- <p class="signup">Didn't Signed up yet ?
 							<a href="#" onclick="toggleForm();">Signup.</a>
-						</p>
+						</p> -->
 					</form>
 				</div>
 			</div>

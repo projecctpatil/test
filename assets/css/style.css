@@ -2288,7 +2288,46 @@ section .container.active .signinBx .imgBx {
 	position: absolute;
 }
 
-.formCheck{
+.checkbox.switcher label, div.radio.switcher label {
+  padding: 0;
+}
+.checkbox.switcher label *, div.radio.switcher label * {
+  vertical-align: middle;
+}
+.checkbox.switcher label input, div.radio.switcher label input {
+  display: none;
+}
+.checkbox.switcher label input + span, div.radio.switcher label input + span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 37px;
+  height: 20px;
+  background: #f2f2f2;
+  border: 1px solid #eee;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.checkbox.switcher label input + span small, div.radio.switcher label input + span small {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+.checkbox.switcher label input:checked + span, div.radio.switcher label input:checked + span {
+  background: #269bff;
+  border-color: #269bff;
+}
+.checkbox.switcher label input:checked + span small, div.radio.switcher label input:checked + span small {
+  left: 50%;
+}
+
+/*.formCheck{
     display: flex;
     justify-content: left;
 }
@@ -2297,7 +2336,7 @@ section .container.active .signinBx .imgBx {
 }
 .formCheck .form-check-label{
     line-height: 2;
-}
+}*/
 
 
 
@@ -2309,7 +2348,7 @@ section .container.active .signinBx .imgBx {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 27px;
 }
 .progress-item button{
     border: 1px solid #677eff;
@@ -2327,7 +2366,18 @@ section .container.active .signinBx .imgBx {
 .wrapper label{
     margin: 0;
 }
-
+.joinchallenge-caption button{
+    border: 1px solid #677eff;
+    border-radius: 5px;
+    background: #677eff;
+    padding: 0px 10px;
+    color: #fff;
+}
+.carouseloffers{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .emp-progress-bar {
   height: 25px;
   width: 100%;

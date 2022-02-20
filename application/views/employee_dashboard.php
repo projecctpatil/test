@@ -100,9 +100,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<div class="col-6">
 												<img src="https://t3.ftcdn.net/jpg/04/59/45/34/240_F_459453406_kbQZI2lPJmqaNVdexiRI0yrOEeQydJTH.jpg">
 											</div>
-											<div class="col-6 joinchallenge-caption">
+											<div class="col-6 joinchallenge-caption text-center">
 												<p>Looks like you have not tried our challenges yet!!</p>
 												<p style="color: chocolate;">Join Challenges now to earn cool rewards!! </p>
+												<button  data-toggle="modal" data-target="#joinchallenge">
+													Join
+												</button>
 											</div>
 										</div>
 									</div>
@@ -215,7 +218,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<a href="javascript:void(0)" class="d-inline-block float-right text-primary"><i class="lnr lnr-sync"></i></a>
 							</div>
 							<div class="card-body recent-activ">
-								<div class="wrapper">
+								<div class="">
 
 									<label>20K Walkamaniac</label>
 									<div class="progress-item">

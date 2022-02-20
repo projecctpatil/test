@@ -53,16 +53,19 @@
 				<?php if (isset($data)) { ?>
 				<ul class="nav navbar-nav">
 					<li class="<?php echo ($this->uri->segment('1') == '') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>index.php"><span class="lnr lnr-home pr-0 pb-lg-2"></span><span class=""> Dashboard</span></a></li>
-					<li class="<?php echo ($this->uri->segment('1') == 'emp_list') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>emp_list"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Employee List </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'emp_list') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>emp_list"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Leaderboard </span></a></li>
+					<li class=""><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class=""> Profile </span></a></li>
 					<li class="<?php echo ($this->uri->segment('1') == 'Logout') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>logout"><span class="lnr lnr-exit-up pr-0 pb-lg-2"></span><span class=""> Logout </span></a></li>
 				</ul>
 				<?php } else { ?>
 				<ul class="nav navbar-nav">
-					<li class="<?php echo ($this->uri->segment('1') == '') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>index.php"><span class="lnr lnr-home pr-0 pb-lg-2"></span><span class=""> Dashboard</span></a></li>
-					<li class="<?php echo ($this->uri->segment('1') == 'company_list') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>company_list"><span class="lnr lnr-apartment pr-0 pb-lg-2"></span><span class=""> Company List </span></a></li>
-					<li class="<?php echo ($this->uri->segment('1') == 'company') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>company"><span class="lnr lnr-calendar-full pr-0 pb-lg-2"></span><span class=""> Company </span></a></li>
-					<li class="<?php echo ($this->uri->segment('1') == 'Testimonial') ? 'active' : ''; ?>"><a href="#"><span class="lnr lnr-star pr-0 pb-lg-2"></span><span class="">Testimonial </span></a></li>
-					<li class="<?php echo ($this->uri->segment('1') == 'Logout') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>logout"><span class="lnr lnr-exit-up pr-0 pb-lg-2"></span><span class=""> Logout </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == '') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>index.php"><i class="fas fa-tachometer-alt"></i><span class=""> Dashboard</span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'company_list') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>company_list"><i class="fa fa-list" aria-hidden="true"></i><span class=""> Employee List </span></a></li>
+					<li class=""><a href="#"><i class="fa fa-certificate" aria-hidden="true"></i><span class=""> Badges </span></a></li>
+					<li class=""><a href="#"><i class="fas fa-chart-line"></i><span class=""> Reports </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'company') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>company"><i class="fa fa-user" aria-hidden="true"></i><span class=""> Profile </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'Testimonial') ? 'active' : ''; ?>"><a href="#"><i class="fa fa-comments" aria-hidden="true"></i><span class="">Testimonial </span></a></li>
+					<li class="<?php echo ($this->uri->segment('1') == 'Logout') ? 'active' : ''; ?>"><a href="<?php echo base_url(); ?>logout"><i class="fa fa-sign-out" aria-hidden="true"></i><span class=""> Logout </span></a></li>
 				</ul>
 			<?php } ?>
 			</div><!-- /.navbar-collapse -->
